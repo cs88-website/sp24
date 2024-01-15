@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content ="C88C: Computational Structures in Data Science" />
+    <meta name="keywords" content ="CS88, C88C, Computer Science, Data Science, Programming, Berkeley, EECS, Python, intro CS, comp sci" />
+    <meta name="author" content ="Michael Ball, Hridhay Suresh, Rebecca Dang, Michelle Chen, Ethan Yoo, Ramya Chitturi, John Teng, Karim El-Refai, Liliana Gonzalez, Angela Bi, Sean Yang, Christy Quang, Morgan Dehdashti, Miha Bhaskaran" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="/sp24/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/sp24/assets/css/style.css">
+    <link rel="icon" href="/sp24/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/sp24/assets/css/mono-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="/sp24/assets/css/resource.css" />
+<link rel="stylesheet" type="text/css" href="/sp24/assets/css/lab.css" />
+
+
+    <title>Lab 0: Community Building + Setup | C88C Spring 2024</title>
+
+  </head>
+
+  <body id="index" class="home">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section" aria-label="Toggle Nav Menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/sp24/">C88C</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-section">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/sp24/">Calendar</a></li>
+            <li><a href="/sp24/articles/resources.html">Resources</a></li>
+            <li><a href="/sp24/weekly-schedule.html">Google Calendar</a></li>
+            <li><a href="/sp24/articles/about.html">Syllabus</a></li>
+            <li><a href="https://edstem.org/us/courses/51226/discussion/" target="_blank">Ed</a></li>
+            <li><a href="/sp24/staff.html">Staff</a></li>
+            <li><a href="https://oh.c88c.org/" target="_blank">OH Queue</a></li>
+            <li><a href="https://tutor.cs61a.org/" target="_blank">Python Tutor</a></li>
+            <li><a href="https://bcourses.berkeley.edu/courses/1528451/external_tools/78985" target="_blank">Recordings</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+
+    <div id="content" class="container">
+      <div class='row'>
+  <div class='col-md-9'>
+    <div class='page-header'>
+      <div class="row row-no-gutters">
+  <div class="col-md-8">
+      <h1 class="content-title-brand" style="padding-top: 0;">
+          Lab 0: Community Building + Setup
+          <br>
+          <small><i>Due at 11:59:59 pm on 1/23/2024.</i></small>
+      </h1>
+  </div>
+  <div class="col-md-4">
+      <a class="h1 btn btn-lg" href="lab00.zip">lab00.zip</a>
+  </div>
+</div>
+    </div>
+
+    <h2 id='starter-files'>Starter Files</h2>
+
+<p>Download <a href="lab00.zip">lab00.zip</a>.
+Inside the archive, you will find starter files for the questions in this lab,
+  along with a copy of the OK autograder.</p>
+
+    
+<blockquote><p>There is a submission for this lab to ensure you have everything set up properly. It is very important you <strong>READ THROUGH THE WHOLE LAB.</strong></p></blockquote>
+
+
+<h2 id="community-building-exercise">Community Building Exercise</h2>
+
+
+<p>At the beginning of class, you will be participating in several activities that introduce you to the community of C88C&mdash;your TA and most importantly, your fellow classmates.</p>
+
+
+<h2 id="data-8-vs-c88c">Data 8 vs C88C</h2>
+
+
+<p>In Data 8 you are doing all your development in the cloud on datahub.berkeley.edu, but we will be using your personal computer for C88C.  If you are using the instructional
+machine in the lab you can ignore this section.</p>
+
+<p>In C8, you mainly work in a Python (Jupyter) notebook: you type a piece of code into a cell, run the cell, and voila, the output is magically displayed. Furthermore, you can type text in addition to code in a Python notebook; all the titles, subtitles, and instructions are text.</p>
+
+<p>However, more often in the real world you would be using a combination of terminal and text editor to run your program. And that’s what we will be doing in this class. This splits the process of writing code and running the code &mdash; you use a text editor to write your code and then you run your code using Python on the terminal.</p>
+
+
+<h2 id="introduction">Introduction</h2>
+
+
+<p>This lab explains how to use your own computer to complete assignments for C88C.
+If you are using a school computer, most of the instructions are the same,
+except you won't have to install anything.</p>
+
+
+<h2 id="setup">Setup</h2>
+
+
+
+<h3 id="install-a-terminal">Install a terminal</h3>
+
+
+<p>The terminal is a program that allows you to interact with your computer
+by entering commands. No matter what operating system you use (Windows,
+MacOS, Linux), the terminal will be an essential tool for C88C.</p>
+
+
+<h4 id="mac-or-linux">Mac or Linux</h4>
+
+
+<p>If you're on a Mac or are using a form of Linux (such as Ubuntu), you already
+have a program called Terminal on your computer.</p>
+
+<ul>
+  <li>For Mac users, you can open the Terminal by pressing <code>Cmd + Space</code> to open Spotlight Search, then type in "Terminal"
+  and click on the corresponding application to launch it.</li>
+  <li>For Linux users, you may need to search up how to open the Terminal depending on your Linux distribution.</li>
+</ul>
+
+
+<h4 id="windows">Windows</h4>
+
+
+<p>For Windows users, we recommend downloading a terminal called Git Bash. Please follow the instructions to download Git Bash here:</p>
+
+<ol>
+  <li>Head to this <a href="https://git-scm.com/downloads">website</a></li>
+  <li>Click the Windows download link.</li>
+  <li>Open the downloaded file and follow the setup instructions that follow. You should be able to install Git Bash with most of the default configuration options, with one exception.
+  <strong>In the "Configuring the terminal emulator to use with Git Bash" step, select the second option:</strong>
+  <strong>"Use Windows' default console window."</strong></li>
+</ol>
+
+
+<h3 id="install-python-3">Install Python 3</h3>
+
+
+<p>Python 3 is our primary programming language. Download the latest version of Python for your operating system (Mac, Windows, Linux) <a href="https://www.python.org/downloads/">here</a>. Then follow the instructions for your specific operating system below.</p>
+
+<blockquote><p>There are 2 major versions of Python in use today: Python 2 and Python 3. In this class, and in most modern applications, we use Python 3 (so when we say "Python" in this class, we really mean "Python 3"). Python 3 is not backwards compatible with Python 2. However, some legacy applications may still use Python 2, which has slightly different syntax and functionality. For example, Python 2 comes preinstalled on Mac, but we want to install Python 3.</p></blockquote>
+
+
+<h4 id="mac">Mac</h4>
+
+
+<ol>
+  <li>Open the downloaded Python 3 installer file.</li>
+  <li>Follow all of the instructions to install Python 3.</li>
+</ol>
+
+<p>To verify that you have installed it properly, open a new Terminal, type the following command, and press enter:</p>
+
+<pre><code>python3 &#x2d;&#x2d;version</code></pre>
+
+<p>If installed properly, you should see the following text in your Terminal, where <code>XX.XX</code> is replaced by whichever version of Python 3 you installed. For example, <code>Python 3.11.4</code>.</p>
+
+<pre><code>Python 3.XX.XX</code></pre>
+
+
+<h4 id="windows">Windows</h4>
+
+
+<ol>
+  <li>Open the downloaded Python 3 installer file.</li>
+  <li>When following the installation instructions, <strong>check the box that says "Add Python 3.XX to PATH"</strong> (where "XX" is replaced by whichever version of Python 3 you installed, such as "Python 3.11"). This will allow you to execute the <code>python</code> command from your terminal (Git Bash).</li>
+</ol>
+
+<p><img class="img-responsive center-block" src="assets/windows-python-path.jpg" alt="Check the box that says Add Python 3.XX to PATH"></p>
+
+<p>To verify that you have installed it properly, open Git Bash, type the following command, and press enter:</p>
+
+<pre><code>python3 &#x2d;&#x2d;version</code></pre>
+
+<p>If installed properly, you should see the following text in your Terminal, where <code>XX.XX</code> is replaced by whichever version of Python 3 you installed. For example, <code>Python 3.11.4</code>.</p>
+
+<pre><code>Python 3.XX.XX</code></pre>
+
+<p>Note: If using <code>python3 &#x2d;&#x2d;version</code> doesn't work, try <code>python &#x2d;&#x2d;version</code>, <code>py &#x2d;&#x2d;version</code>, or <code>py3 &#x2d;&#x2d;version</code>.</p>
+
+
+<h3 id="install-a-text-editor">Install a text editor</h3>
+
+
+<p>Your computer's terminal combined with the Python 3 you just installed allows you to <em>run</em> Python
+code. You will also need a <strong>text editor</strong>, which will help you <em>write</em> Python
+code.</p>
+
+<p>A text editor is a program that allows you to edit text files (including files that contain code), and often comes
+with tools to help you customize your experience. You will be using a text editor to create, modify, and save files.</p>
+
+<p>There are many editors out there, each with its own set of features. <strong>We highly recommend for this class you use <a href="https://code.visualstudio.com/">Visual Studio Code</a>, aka VS Code.</strong> Visual Studio Code is a full-featured desktop editor with many extensions available to support different languages, and is widely used by course staff.</p>
+
+<blockquote><p><strong>Note</strong>: Please, please, <em>please</em> do not use Microsoft Word to edit
+programs. Word is designed to edit natural languages like English &mdash; trouble
+will ensue if you try to write Python with Word!</p></blockquote>
+
+
+<h3 id="pair-programming">Pair Programming</h3>
+
+
+<p>Throughout this course, you will have many chances to collaboratively code with others in labs and projects. We recommend you download <a href="/sp24/articles/vscode.html#pair-programming">VS Code's Live Share extension</a> to help with this: It's like Google Docs, but for writing code!</p>
+
+
+<h2 id="using-the-terminal">Using the terminal</h2>
+
+
+
+<h3 id="terminal-walkthrough">Terminal Walkthrough</h3>
+
+
+<p>Your computer's terminal is a command line system or tool for you to interact with folders and files on your computer.</p>
+
+<p>If you're on a Mac, open Terminal. If you're on Windows, open Git Bash (which you should have installed earlier). Follow along by trying out the commands in the following walkthrough.</p>
+
+<p>When you open up the terminal, you'll see something called a prompt (usually <code>$</code> or <code>%</code>) right before your cursor. This is how you can tell that you are in the terminal and it is ready to accept commands.</p>
+
+<p>When you open up the terminal directly, you'll start off in something called your <em>home directory</em>, represented by a tilde (<code>~</code>). A <em>directory</em> is just a fancy word for <em>folder</em>. Directories can contain <em>files</em> or other directories. The location of every file or directory is denoted by a <em>path</em>. For example, consider the following file structure:</p>
+
+<pre><code>~
+|&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;Desktop
+|        |
+|        |&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;Screenshots
+|                   |&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;a.png
+|                   |&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;b.png
+|&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;Downloads
+|        |&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;c.txt</code></pre>
+
+<p>The <em>absolute path</em> to the file <code>a.png</code> is <code>~/Desktop/Screenshots/a.png</code>. As the name suggests, this path is <em>absolute</em> &mdash; it is the full and complete path and a file/directory's absolute path doesn't change (unless its location of the file/directory changes).</p>
+
+<p>Suppose that the directory you're currently in is <code>Desktop</code>. Then the <em>relative path</em> to the file <code>a.png</code> is <code>/Screenshots/a.png</code>. As the name suggests, this path is <em>relative</em> to the directory you currently are in. If you were in the <code>Downloads</code> directory, the relative path would be <code>../Desktop/Screenshots/a.png</code>. Note that <code>..</code> represents the <em>parent directory</em> and <code>.</code> represents the <em>current directory</em>.</p>
+
+<p>Now go back to your terminal window. You can view the contents of a directory using the command <code>ls</code> (short for "list").</p>
+
+<p>To display the absolute path of your current directory, use the command <code>pwd</code> (short for "print working directory").</p>
+
+<p>To move between directories, use the command <code>cd &lt;path&gt;</code> (short for "change directory"). Replace <code>&lt;path&gt;</code> with the relative or absolute path that you want to go into. For example, if you are on a Mac, enter</p>
+
+<pre><code>cd desktop</code></pre>
+
+<p>to go into your <code>Desktop</code> directory. (The absolute path is <code>~/Desktop</code>. You can also try doing <code>cd ~/Desktop</code> to see if it does the same thing &mdash; it should!)</p>
+
+<p>The most common terminal commands are as follows:</p>
+
+<ul>
+  <li><code>ls</code> - lists out all the files and directories in the current directory</li>
+  <li><p><code>cd &lt;path&gt;</code> - move into the directory specified by the given <code>&lt;path&gt;</code></p>
+
+  <ul>
+    <li><code>cd ..</code> - move up to the parent directory</li>
+    <li><code>cd ~</code> - move to the home directory</li>
+  </ul></li>
+  <li><code>mkdir &lt;directory_name&gt;</code> - "make directory", or create a folder in the current directory with the given <code>&lt;directory_name&gt;</code></li>
+  <li><code>touch &lt;file_name&gt;</code> - create a new file with the given <code>&lt;file_name&gt;</code></li>
+  <li><code>clear</code> - clear previous commands to make terminal look cleaner</li>
+  <li><code>rm &lt;file_or_directory&gt;</code> - deletes the given file or directory (<strong>WARNING: there is no way to recover files deleted this way. They do NOT go to your trash/recycle bin, they just get deleted permanently.</strong>)</li>
+  <li><code>mv &lt;source_file&gt; &lt;target_directory&gt;</code> - moves the given source file to the given target directory</li>
+</ul>
+
+<p>You may also find these keyboard shortcuts useful:</p>
+
+<ul>
+  <li><code>Up Arrow</code> - replaces the current command you've typed with the last command you entered. You can press <code>Up Arrow</code> as many times as needed to go through your previous commands.</li>
+  <li><code>Ctrl + C</code> - aborts current command. Useful if you ran a command and it's stuck loading forever or you want to cancel a command. (Note: For Mac, Ctrl is literally the Control button, not the Command button.)</li>
+  <li><code>Ctrl + R</code> - allows you to search for previous commands</li>
+  <li><code>Tab</code> - When entering commands, you can press <code>Tab</code> for autocomplete. If you press <code>Tab</code> twice, it will display all autocomplete possibilities.</li>
+</ul>
+
+<p>You aren't expected to memorize these terminal commands and they will not be tested. You can also take a look at our <a href="/sp24/articles/unix.html">UNIX tutorial</a> for a more detailed explanation of terminal commands. They're just useful for you to know as you complete assignments and when you work on real-world projects at your job.</p>
+
+
+<h3 id="creating-a-c88c-directory">Creating a <code>c88c</code> directory</h3>
+
+
+<p>For this course, we recommend that you put all of your coding assignments in one overarching directory called <code>c88c</code>. We also recommend putting this directory into a place that you remember and can easily access from the terminal, such as your desktop directory. Inside of that directory, create 3 more directories that will contain the different types of assignments: <code>labs</code>, <code>hw</code>, and <code>projects</code>.</p>
+
+<p>Here is an example sequence of commands to accomplish this task (this may be different depending on which directory you're located in on your terminal):</p>
+
+<pre><code>cd desktop
+mkdir c88c
+cd c88c
+mkdir labs
+mkdir hw
+mkdir projects</code></pre>
+
+<p>You can verify that you have setup the <code>c88c</code> directory correctly by opening your computer's file explorer (Finder for Mac or File Explorer for Windows) and navigating to where you stored <code>c88c</code>, or by using <code>ls</code> and <code>pwd</code> in your terminal.</p>
+
+
+<h3 id="vs-code-integrated-terminal">VS Code Integrated Terminal</h3>
+
+
+<p>As you work on coding assignments in this course, you will often find yourself switching back and forth between writing code and running code. To make things easier, you do not need to open your terminal app and text editor separately &mdash; you can have everything in one window. The following instructions are applicable to VS Code (the recommended editor), but most editors have a similar integrated terminal feature.</p>
+
+<ol>
+  <li>Open VS Code</li>
+  <li>At the top menu bar, go to File > Open and click on the <code>c88c</code> directory you just created.</li>
+  <li>At the top menu bar, go to Terminal > New Terminal. It should open a mini terminal window inside your VS Code window. <strong>Note:</strong> For Windows, ensure that the terminal opened is Git Bash (Windows has multiple types of terminals). See <a href="https://code.visualstudio.com/docs/terminal/basics#_terminal-shells">this article</a> for how to select Git Bash. You can also configure your terminal settings so that every time you create a new terminal in VS Code, it defaults to opening a Git Bash shell.</li>
+</ol>
+
+<blockquote><p>When you open an integrated terminal, your text editor will automatically move you into the directory that you opened in step 2. In this case, it would be something like <code>~/Desktop/c88c</code>. You can always verify this by running <code>pwd</code> in the terminal to make sure the path that is displayed is the one you expect.</p></blockquote>
+
+
+<h3 id="python-interpreter-walkthrough">Python Interpreter Walkthrough</h3>
+
+
+<p>Throughout the course, you may want to try running small bits of Python code and see what gets returned or printed. You can do this using the <em>Python Interpreter</em>, which comes with your installation of Python 3. Follow along with the walkthrough below in your own terminal.</p>
+
+<blockquote><p>While you run the Python interpreter inside a terminal shell, <strong>the commands you input into the terminal are different from the code you input into the Python interpreter</strong>. You can only use Python syntax in the Python interpreter (e.g. when the prompt is <code>&gt;&gt;&gt;</code>) and you can only use terminal commands in the terminal (e.g. when the prompt is <code>$</code> or <code>%</code>)</p>
+
+<p><strong>Any code you write in the Python Interpreter is NOT saved. When you exit, everything will be lost.</strong> When writing code for assignments, you should write your code directly into the Python files. However, for testing or debugging you may want to use the Python Interpreter which is why we show you how to use it here.</p></blockquote>
+
+<p>Run the following command in your terminal:</p>
+
+<pre><code>python3</code></pre>
+
+<p>If the Python 3 installation worked, you should see something similar to this:</p>
+
+<pre><code>Python 3.11.4 (main, Jan 20 2024, 17:35:35) [Clang 14.0.0 (clang&#x2d;1400.0.29.202)] on darwin
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; </code></pre>
+
+<p>This is where you can type in Python code. Try typing some expressions you saw in lecture, or just play around to see
+what happens! You can type <code>exit()</code> or <code>Ctrl + D</code> to return to your command line.</p>
+
+<blockquote><p>Windows troubleshooting:</p>
+
+<ul>
+  <li>If the <code>python3</code> command doesn't run <em>at all</em>:
+  <br/>
+  Try <code>python</code>, <code>py</code>, or <code>py &#x2d;3</code> instead.</li>
+  <li>If Python freezes (doesn't display anything at all):
+  <br/>
+  You probably didn't select the <strong>"Use Windows' default console window"</strong> option when installing Git-Bash manually.
+  Try <code>winpty python</code>, or just uninstall Git-Bash and reinstall it with the correct options.</li>
+  <li>If you see an error like <code>WindowsApps/python: Permission denied</code>:
+  <br/>
+  Go to the <code>WindowsApps</code> folder whose path is shown, and rename <code>python.exe</code> to <code>python.bak.exe</code>
+  (and similarly, rename <code>python3.exe</code> to <code>python3.bak.exe</code>), then try again.</li>
+  <li>If Python doesn't run <em>at all</em>, and you used our automated installer:
+  <br/>
+  Go back and try installing using the manual method.</li>
+  <li>If Python doesn't run <em>at all</em>, and you installed manually:
+  <br/>
+  Make sure you set up your "PATH" correctly as shown above.</li>
+  <li>If you mixed multiple versions of Python (e.g. 32-bit and 64-bit, or 3.6 and 3.8, etc.):
+  <br/>
+  They may conflict. Occasionally, this becomes extremely difficult to fix—even for instructors.
+  <br/>
+  Uninstall them one-by-one (the most recent one <em>first</em>), then reinstall only the latest 64-bit version.</li>
+</ul>
+
+<p>Ask for help if you get stuck!</p></blockquote>
+
+<p>Note, if you have trouble opening or setting up a terminal on your computer,
+an alternative option (though this is not recommended) is to use <a href="https://datahub.berkeley.edu/">datahub</a>.
+To open a terminal in datahub, click on “new” in the upper-right hand corner,
+and click on terminal. Most likely you won't ever need this if everything else
+is set up properly on your computer, but you may play around with the terminal
+here if you'd like.</p>
+
+<p><img class="img-responsive center-block" src="assets/jupyter-terminal.jpg" alt="Terminal in Jupyter"></p>
+
+<p>When you open a terminal in datahub, it looks something like this:</p>
+
+<p><img class="img-responsive center-block" src="assets/home-dir-jupyter.jpg" alt="Jupyter Terminal"></p>
+
+
+<h2 id="python-basics">Python Basics</h2>
+
+
+<p>Here's a quick refresher on Python basics. Feel free to follow along on your own Python Interpreter with the Python expressions below.</p>
+
+<p>Floating point numbers (floats) behave a lot like real numbers.  You can identify a float by the decimal point. <strong>All floats have decimal points.</strong>  To write a floating point number (as a literal) you must add a decimal point!</p>
+
+<pre><code>&gt;&gt;&gt; 3.141592
+3.141592
+&gt;&gt;&gt; 2 * 3.141592  # you can mix ints and floats 
+6.283184
+&gt;&gt;&gt; pie = 3.141592  # you can assign values to variables
+&gt;&gt;&gt; pie
+3.141592
+&gt;&gt;&gt; pie / pie
+1.0
+&gt;&gt;&gt; pie / pie == 1  # a float can be equal in value to an int
+True
+&gt;&gt;&gt; from math import pi  # here is a better pi
+&gt;&gt;&gt; pi
+3.141592653589793
+&gt;&gt;&gt; 5.0 / 3.0  # this is division of floats, not ints
+1.6666666666666667
+&gt;&gt;&gt; 2 ** (1 / 2) # square root &#x2d; isn&#x27;t that transcendental?
+1.4142135623730951</code></pre>
+
+<p>Expressions follow operator precedence (just like in math). Operations are performed one at a time in a specific order. Parenthesis are used to specify order (again, just like in math - remember PEMDAS?).</p>
+
+<pre><code>&gt;&gt;&gt; 2 + 3 &#x2d; 4 + 5   # equal precedence, left to right
+6
+&gt;&gt;&gt; 2 + 3 &#x2d; (4 + 5) # order matters &#x2d; parentheses are your friend
+&#x2d;4
+&gt;&gt;&gt; (((2 + 3) &#x2d; 4) + 5) # explicit order of the first example
+6
+&gt;&gt;&gt; 2 + 3 * 4   # * and / bind more tightly than + or &#x2d; 
+14
+&gt;&gt;&gt; 2 + (3 * 4) 
+14
+&gt;&gt;&gt; (2 + 3) * 4  
+20
+&gt;&gt;&gt; 2 + 3 / 4 * 5  # what about * and / ?
+5.75</code></pre>
+
+<p>An expression can have multiple return values, called a tuple:</p>
+
+<pre><code>&gt;&gt;&gt; 2, 3
+(2, 3)
+&gt;&gt;&gt; x, y = 1, pi
+&gt;&gt;&gt; x
+1
+&gt;&gt;&gt; y
+3.141592653589793</code></pre>
+
+
+<h2 id="doing-the-assignment">Doing the assignment</h2>
+
+
+
+<h3 id="downloading-the-assignment">Downloading the assignment</h3>
+
+
+<p>We will begin the assignment by first downloading the zip file,
+<a href="lab00.zip">lab00.zip</a>. <strong>Make sure to save it to your <code>c88c/labs</code> directory.</strong>
+If you make a mistake or have already downloaded it, you can always drag the zip file
+manually using your file explorer (e.g. Finder on Mac or File Explorer on Windows)
+or use the <code>mv</code> command in the terminal to move the file to the correct folder.</p>
+
+
+<h3 id="extracting-starter-files">Extracting starter files</h3>
+
+
+<ol>
+  <li>Open the <code>c88c</code> directory on VS Code.</li>
+  <li>Open a new integrated terminal on VS Code (or a separate terminal if you prefer).</li>
+  <li>In the terminal, ensure you are in the <code>c88c</code> directory (if not, <code>cd</code> into it).</li>
+  <li>In the terminal, enter <code>cd labs</code>.</li>
+  <li>In the terminal, enter <code>unzip lab00.zip</code>. This will unzip the file. <strong>Note: If you already opened the <code>lab00.zip</code> file upon downloading it, you may not need to do this step. You can tell if the file is already unzipped if you see a new folder called <code>lab00</code> in the <code>c88c</code> directory (see step 6).</strong></li>
+  <li>Once you unzip <code>lab00.zip</code>, you should have a new folder called <code>lab00</code> in the <code>c88c</code> directory which contains the following files:</li>
+</ol>
+
+<ul>
+  <li><code>lab00.py</code>: The template file you'll be adding your code to</li>
+  <li><code>ok</code>: A program used to test assignments</li>
+  <li><code>lab00.ok</code>: A configuration file for <code>ok</code></li>
+</ul>
+
+<p>You no longer need <code>lab00.zip</code> and can delete it from your <code>c88c</code> folder if you want.
+You're now ready to start looking at the code! Don't worry if this seems
+complicated &mdash; it will get much easier over time. Just keep practicing!</p>
+
+
+<h3 id="workflow-overview">Workflow overview</h3>
+
+
+<p>For each assignment, we'll provide you with some starter code (for example, <code>lab00.py</code>);
+all you have to do is fill in the parts that are incomplete.</p>
+
+<p>Open <code>lab00.py</code> in your text editor of choice (this will be Visual Studio Code, Vim, etc.).</p>
+
+<p>In our productive workflow, we suggest having your text editor and terminal open at the same time.</p>
+
+<ol>
+  <li>Your text editor (e.g. VS Code) with the files you are editing, where you will write code.</li>
+  <li>Your terminal window (e.g. Terminal or Git Bash) so you can easily test your code. We recommend using your text editor's integrated terminal, but you can also have a separate terminal window if you'd like as well.</li>
+</ol>
+
+<p>Here's a screenshot of a typical workspace.</p>
+
+<p><img class="img-responsive center-block" src="assets/example-vscode-terminal-setup.jpg" alt="productive workflow"></p>
+
+<blockquote><p>This screenshot uses Visual Studio Code and its integrated terminal on MacOS, and is from the year 2023.
+This particular setup might look different from yours. That's okay!</p></blockquote>
+
+<h3 class="question" id="q1">Question 1: Twenty Twenty Four</h3>
+
+<p>Open up <code>lab00.py</code> in your text editor. You should see something like this:</p>
+
+
+
+<pre><code>def twenty_twenty_four():
+    &quot;&quot;&quot;Come up with the most creative expression that evaluates to 2024,
+    using only numbers and the +, *, and &#x2d; operators.
+
+    &gt;&gt;&gt; twenty_twenty_four()
+    2024
+    &quot;&quot;&quot;
+<div class="alt 1">    return ______
+</div><div class="solution 1">&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x32;&#x20;&#x2a;&#x20;&#x31;&#x30;&#x30;&#x30;&#x20;&#x2b;&#x20;&#x32;&#x34;</div></code></pre>
+
+
+    <button id='1' class='toggleButton'>
+    Toggle Solution<noscript> (enable JavaScript)</noscript>
+    </button>
+    
+
+<p>The lines in the triple-quotes <code>&quot;&quot;&quot;</code> are called a <strong>docstring</strong>, which is a
+description of what the function is supposed to do.  When writing code in C88C,
+you should always read the docstring!</p>
+
+<p>The lines in the docstring that begin with <code>&gt;&gt;&gt;</code> are called <strong>doctests</strong>.
+Doctests explain what the function is supposed to do by showing actual Python code.
+The lines underneath the <code>&gt;&gt;&gt;</code> show the expected output from running the above Python code
+in the Python Interpreter, assuming the function has been defined.</p>
+
+<p>In <code>twenty_twenty_four</code>,</p>
+
+<ul>
+  <li>The docstring tells us to "come up with the most creative expression that
+  evaluates to 2024," but that we can only use numbers and arithmetic operators
+  <code>+</code> (add), <code>*</code> (multiply), and <code>&#x2d;</code> (subtract).</li>
+  <li>The doctest for <code>twenty_twenty_four()</code> checks that no matter how we do our
+  calculation, <code>twenty_twenty_four</code> should return the number 2024.</li>
+</ul>
+
+<blockquote><p>You should never change the doctests in your assignments! The only
+part of your assignments that you'll need to edit is the code.</p></blockquote>
+
+
+<h3 id="writing-code">Writing code</h3>
+
+
+<p>Once you understand what the question is asking, you're ready to start writing
+code! You should replace the underscores in <code>return ______</code> with an arithmetic expression that
+evaluates to 2024. What's the most creative expression you can come up with?</p>
+
+
+<h4 id="manual-tests">Manual Tests</h4>
+
+
+<p>Below is an example of how to write and test your code <em>manually</em> (later we will show you how to run the autograder tests with OkPy).</p>
+
+<p>Open <code>lab00.py</code> in your text editor. Start by simply returning <code>2024</code>. This is not
+very creative, but it gives the right answer.</p>
+
+<p>In your terminal, ensure that you are in the <code>lab00</code> directory. If you're currently in the <code>c88c</code> directory, you will need to run:</p>
+
+<pre><code>cd labs/lab00</code></pre>
+
+<p>Once you are in the <code>lab00</code> directory, run:</p>
+
+<pre><code>python3 &#x2d;i lab00.py</code></pre>
+
+<p>This should open the Python interpreter. Notice that we added <code>&#x2d;i</code> to the <code>python3</code> command.
+The <code>&#x2d;i</code> is called the "interactive flag" because it loads and runs the code in the file
+you gave it (lab00.py) and then allows you to enter more Python code
+in the interpreter. This will allow you to call the function in the Python interpreter
+and it should display <code>2024</code>.</p>
+
+<pre><code>&gt;&gt;&gt; twenty_twenty_four()
+2024</code></pre>
+
+<p>On the other hand, if you just entered <code>python3</code> and tried to call the function, it would give you an error since it doesn't recognize your function (it hasn't been loaded).</p>
+
+<p>Additionally, if you omitted the <code>&#x2d;i</code> and ran this command in the terminal:</p>
+
+<pre><code>python3 lab00.py</code></pre>
+
+<p>This would simply run the lab00.py file. Since this file only contains a function definition, it will not display any output (since in the file you didn't call the function).</p>
+
+<p>Once you're done testing, exit the Python interpreter to get back to your terminal shell (enter <code>exit()</code>). You will need to do that each time you run Python interactively.</p>
+
+<p>You are going to want to learn to test your code before submitting it to the autograder. This
+always begins with reading it, thinking about it and convincing yourself it should work. Come
+up with examples that verify it really does what it should. That is what goes into the docstring.</p>
+
+<blockquote><p><strong>Troubleshooting tests</strong> (for both manual and autograder tests): If you are trying to test
+your code and you're not getting the output you expected, there could be many things going on.</p>
+
+<ol>
+  <li>It's possible that the code you wrote has a bug in it. You can debug these in a variety
+  of ways, such as <code>print</code> statements.</li>
+  <li>It could be that you forgot to save the file you were working on. You can check whether
+  a file has unsaved changes in VS Code by seeing if there is a white circle in the file tab.
+  (To prevent this problem from happening, you can turn on <a href="https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save">VS Code auto save</a>.)</li>
+  <li>If you are manually testing using the Python Interpreter with the <code>&#x2d;i</code> flag, be aware that
+  when you save changes to the file, it does not update automatically. You must exit the Python
+  interpreter and restart it again with the <code>&#x2d;i</code> flag to load the updated code.</li>
+</ol></blockquote>
+
+
+<h3 id="running-tests">Running tests</h3>
+
+
+<p>In C88C, we will use a program called <code>ok</code> to test our code. <code>ok</code> will be
+included in every assignment in this class.</p>
+
+<p>Back to the terminal! Make sure you are in the <code>lab00</code> directory we created
+earlier (remember, the <code>cd</code> command lets you change directories).</p>
+
+<p>In that directory, you can type <code>ls</code> to verify that there are the following
+three files:</p>
+
+<ul>
+  <li><code>lab00.py</code>: the starter file you just edited</li>
+  <li><code>ok</code>: our autograder</li>
+  <li><code>lab00.ok</code>: a configuration file for OK</li>
+</ul>
+
+<p>Now, let's test our code to make sure it works. You can run <code>ok</code> with this
+command:</p>
+
+<pre><code>python3 ok &#x2d;q twenty_twenty_four</code></pre>
+
+<p>If you wrote your code correctly, we should see a successful test:</p>
+
+<pre><code>=====================================================================
+Assignment: Lab 0
+OK, version v1.18.1
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running tests
+
+&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;
+Test summary
+    1 test cases passed! No cases failed.
+
+Backup... 100% complete
+Backup successful for user: oski@berkeley.edu
+URL: https://okpy.org/cal/cs88/sp24/lab00/backups/abc123
+
+OK is up to date</code></pre>
+
+<p>If you didn't pass the tests, <code>ok</code> will instead show you something like this:</p>
+
+<pre><code>=====================================================================
+Assignment: Lab 0
+OK, version v1.18.1
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running tests
+
+&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;
+Doctests for twenty_twenty_four
+
+&gt;&gt;&gt; from lab00 import *
+&gt;&gt;&gt; twenty_twenty_four()
+2014
+
+# Error: expected
+#     2024
+# but got
+#     2014
+
+&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;
+Test summary
+    0 test cases passed before encountering first failed test case
+
+Backup... 100% complete
+Backup successful for user: oski@berkeley.edu
+URL: https://okpy.org/cal/cs88/sp24/lab00/backups/abc123
+
+OK is up to date</code></pre>
+
+<p>Fix your code in the text editor until the test passes. See also the troubleshooting tests section above if you're having trouble.</p>
+
+
+<h2 id="final-task-submitting-the-assignment"><strong>Final Task</strong>: Submitting the Assignment</h2>
+
+
+<p>Now that you have completed your first C88C assignment, it's time to turn it in. You can follow these next steps to submit your work and get points.</p>
+
+
+<h3 id="submit-with-gradescope"><a href="https://www.gradescope.com/courses/693229">Submit with Gradescope</a></h3>
+
+
+<ol>
+  <li><p>Log in with <strong>School Credentials</strong> using your CalNet ID to <a href="https://www.gradescope.com/">Gradescope</a>. You’ll be taken to your <strong>Dashboard</strong> as soon as you log in.</p>
+
+  <p float="left">
+  <img class="img-responsive center-block" src="assets/gradescope-loginscreen.png" width="200" height = "200">
+  <img class="img-responsive center-block" src="assets/gradescope-login.png" width="200" heght = "100">
+  </p></li>
+  <li>On your <strong>Dashboard</strong>, select the course C88C. You should have already been added to Gradescope. If this is not the case, please make a private Ed post. This will take you to the list of assignments in the course that you’re able to submit. On this list, you will see the status of the assignment, the release date, and the due date.</li>
+  <li>Click on the assignment to open it.</li>
+  <li><p>When the dialog box appears, click on the gray area that says <strong>Drag &amp; Drop</strong>. This will open your file finder and you should select your code file (example: <code>lab00.py</code>) that you edited for this assignment.</p>
+
+  <p><img class="img-responsive center-block" src="assets/gradescope-submit.png" alt="gradescope submit"> <br></p></li>
+  <li><p>Once you’ve chosen your file select the <strong>Upload</strong> button. When your upload is successful, you’ll see a confirmation message on your screen and you’ll receive an email.</p>
+
+  <p><img class="img-responsive center-block" src="assets/gradescope-upload.png" alt="gradescope upload"></p></li>
+  <li><p><strong>IMPORTANT:</strong> Wait a few minutes for the autograder to grade your code file. <strong>For all assignments, it is YOUR responsibility to verify that the Gradescope autograder results matches what you expect.</strong> Your final score will appear at the right and your output should be the same as the one you tested locally. You can check the code that you submitted at the top right where there is a tab labeled <strong>Code</strong>. If there are any errors, you can edit your code and click <strong>Resubmit</strong> at the bottom of your screen to resubmit your code file. Assignments can be resubmitted as many times as you’d like before the deadline. <strong>Note that the screenshot is from 2023, but your year will be different.</strong></p>
+
+  <p><img class="img-responsive center-block" src="assets/gradescope-results.png" alt="gradescope results"></p></li>
+</ol>
+
+<p>🎉🎉 Congratulations on finishing your first lab! And welcome to C88C. We hope this will be a rewarding semester!</p>
+
+
+<h2 id="appendix">Appendix</h2>
+
+
+
+<h3 id="useful-python-command-line-options">Useful Python command line options</h3>
+
+
+<p>When running a Python file, you can use <strong>flags</strong> on the command line
+to inspect your code further. Here are a few that will come in handy.
+If you want to learn more about other Python flags, take a look at the
+<a href="https://docs.python.org/3.4/using/cmdline.html">documentation</a>.</p>
+
+<ul>
+  <li><p>Using no flags will run the code in the file you
+  provide and return you to the command line.</p>
+
+<pre><code>python3 lab00.py</code></pre></li>
+  <li><p><strong><code>&#x2d;i</code></strong>: The <code>&#x2d;i</code> option runs your Python script first, then opens an interactive
+  session. To exit, type <code>exit()</code> into the interpreter prompt. You
+  can also use the keyboard shortcut <code>Ctrl&#x2d;D</code> on Linux/Mac machines or <code>Ctrl&#x2d;Z
+  Enter</code> on Windows.</p>
+
+  <p>If you edit the Python file while running it interactively, you will need to
+  exit and restart the interpreter in order for those changes to take effect.</p>
+
+<pre><code>python3 &#x2d;i lab00.py</code></pre></li>
+  <li><p><strong><code>&#x2d;m doctest</code></strong>: Runs doctests in a particular file. If there is no output, it means all doctests passed. Doctests are
+  marked by triple quotes (<code>&quot;&quot;&quot;</code>) and are usually located within
+  functions. DO NOT DELETE DOCTESTS ON YOUR LABS AND HOMEWORKS. The 
+  autograder (OK) will not run properly without them.</p>
+
+<pre><code>python3 &#x2d;m doctest lab00.py</code></pre></li>
+</ul>
+
+
+<h3 id="optional-text-editor-guides">(Optional) Text Editor Guides</h3>
+
+
+<p>For your reference, we've written some guides on using popular text
+editors. After you're done with lab, you can take a look if you're interested:</p>
+
+<ul>
+  <li><a href="/sp24/articles/vscode.html">VS Code</a>: A text editor with a graphical user interface.</li>
+  <li><a href="/sp24/articles/emacs.html">Emacs</a>: A command-line editor.</li>
+  <li><a href="/sp24/articles/vim.html">Vim</a>: A command-line editor.</li>
+</ul>
+
+
+<h2 id='submission'>Submission</h2>
+
+<p>
+    When you are done, submit your file to <a href="https://www.gradescope.com/courses/693229" target="_blank">Gradescope</a>.
+    You only need to upload the following files:
+    
+<ul>
+  <li><code>lab00.py</code></li>
+</ul>
+
+    You may submit more than once before the deadline; only the final submission will be graded.
+    It is your responsibility to check that the autograder on Gradescope runs as expected after
+    you upload your submission.
+</p>
+  </div>
+
+  <div class='col-md-3'>
+    <nav class='hidden-print hidden-sm hidden-xs sidebar'>
+      <ul>
+  <li><a href="#community-building-exercise">Community Building Exercise</a></li>
+  <li><a href="#data-8-vs-c88c">Data 8 vs C88C</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#setup">Setup</a></li>
+  <ul>
+  <li><a href="#install-a-terminal">Install a terminal</a></li>
+  <ul>
+  <li><a href="#mac-or-linux">Mac or Linux</a></li>
+  <li><a href="#windows">Windows</a></li>
+</ul>
+
+  <li><a href="#install-python-3">Install Python 3</a></li>
+  <ul>
+  <li><a href="#mac">Mac</a></li>
+  <li><a href="#windows">Windows</a></li>
+</ul>
+
+  <li><a href="#install-a-text-editor">Install a text editor</a></li>
+  <li><a href="#pair-programming">Pair Programming</a></li>
+</ul>
+
+  <li><a href="#using-the-terminal">Using the terminal</a></li>
+  <ul>
+  <li><a href="#terminal-walkthrough">Terminal Walkthrough</a></li>
+  <li><a href="#creating-a-c88c-directory">Creating a <code>c88c</code> directory</a></li>
+  <li><a href="#vs-code-integrated-terminal">VS Code Integrated Terminal</a></li>
+  <li><a href="#python-interpreter-walkthrough">Python Interpreter Walkthrough</a></li>
+</ul>
+
+  <li><a href="#python-basics">Python Basics</a></li>
+  <li><a href="#doing-the-assignment">Doing the assignment</a></li>
+  <ul>
+  <li><a href="#downloading-the-assignment">Downloading the assignment</a></li>
+  <li><a href="#extracting-starter-files">Extracting starter files</a></li>
+  <li><a href="#workflow-overview">Workflow overview</a></li>
+  <li><a href="#q1">Question 1: Twenty Twenty Four</a></li>
+  <li><a href="#writing-code">Writing code</a></li>
+  <ul>
+  <li><a href="#manual-tests">Manual Tests</a></li>
+</ul>
+
+  <li><a href="#running-tests">Running tests</a></li>
+</ul>
+
+  <li><a href="#final-task-submitting-the-assignment"><strong>Final Task</strong>: Submitting the Assignment</a></li>
+  <ul>
+  <li><a href="#submit-with-gradescope"><a href="https://www.gradescope.com/courses/693229">Submit with Gradescope</a></a></li>
+</ul>
+
+  <li><a href="#appendix">Appendix</a></li>
+  <ul>
+  <li><a href="#useful-python-command-line-options">Useful Python command line options</a></li>
+  <li><a href="#optional-text-editor-guides">(Optional) Text Editor Guides</a></li>
+</ul>
+
+</ul>
+
+    </nav>
+  </div>
+
+</div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/sp24/assets/js/bootstrap.min.js"></script>
+    <!-- TODO: Move to specific pages... -->
+    <script src="/sp24/assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+  $('.sidebar ul').addClass('nav nav-stacked');
+  $('body').scrollspy({
+    target: '.sidebar',
+    offset: 40
+  });
+</script>
+<!-- <script src="//code.jquery.com/jquery-latest.js"></script> -->
+<!--  -->
+  </body>
+</html>
