@@ -5,6 +5,8 @@ published
 .token
 __pycache__
 
+*~
+
 # Exclude compiled zips for convenience
 # Also, the zips include unlocked test cases
 *autograder.zip
