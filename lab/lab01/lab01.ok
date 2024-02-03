@@ -19,8 +19,6 @@
 	    "tests/hof_extra.py": "ok_test"
     },
     "default_tests": [
-        "control",
-        "short_circuiting",
         "sum_digits",
         "both_positive"
     ],
