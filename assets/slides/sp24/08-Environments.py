@@ -1,3 +1,40 @@
+def add_one(n):
+    return n + 1
+
+add_one(3)
+
+def make_adder(n):
+    def adder(x):
+        return x + n
+    return adder
+
+add_1 = make_adder(1)
+add_1(3)
+
+add_4 = make_adder(4)
+add_4(5)
+
+def leq_maker(c):
+    def leq(val):
+        return val <= c
+    return leq
+
+def compose(f, g):
+    def h(x):
+      return f(g(x))
+    return h
+
+add_2 = make_adder(2)
+add_3 = make_adder(3)
+x = add_2(3)
+
+add_5 = compose(add_2, add_3)
+y = add_5(x)
+
+z = compose(square, make_adder(2))(3)
+
+
+
 
 def say_hi(name):
     print(f'Hi, {name}')
@@ -35,21 +72,3 @@ remove_dupes = lambda result, data: result if data in result else result + [ dat
 
 from functools import reduce
 reduce(remove_dupes, staff, [])
-
-course = {
-    'name': 'Comp Structures in Data Science',
-    'number': 'C88C',
-    'room': '155 Dwinelle Hall'
-}
-
-text = 'Once Upon A Time'
-
-counts  = { word : len(word) for word in text.split(' ') }
-counts
-
-counts.keys()
-counts.values()
-counts.items()
-# counts['time']
-# counts['hello']
-counts.get('hello')
