@@ -251,7 +251,10 @@ for num in numbers:
 
 <h3 class="question" id="q1">Question 1: Classify the elements</h3>
 
-<p>Complete the function <code>odd_even</code> that classifies an number as either <code>&#x27;odd&#x27;</code> or <code>&#x27;even&#x27;</code> and the function <code>classify</code> that takes in a list and applies <code>odd_even</code> to all elements in the list.</p>
+<p>Complete the function <code>odd_even</code> that returns <code>&#x27;odd&#x27;</code> if the given integer <code>x</code> is odd, and returns <code>&#x27;even&#x27;</code> otherwise.</p>
+
+<p>Additionally, complete another function <code>classify</code> that takes in a list <code>s</code> and returns a new list
+that applies <code>odd_even</code> to all elements in <code>s</code>.</p>
 
 
 
@@ -285,8 +288,9 @@ def classify(s):
 
 <h3 class="question" id="q2">Question 2: Find first word longer than n</h3>
 
-<p>Complete the function <code>find_word</code> that takes in a list and returns the first word longer than n or an empty string <code>&#x27;&#x27;</code> if there is no word longer than n.
-</p>
+<p>Complete the function <code>find_word</code> that takes in a list <code>words</code> and returns the first word with a length greater than <code>n</code>. If none of the words have length greater than <code>n</code>, return the empty string <code>&#x27;&#x27;</code>.</p>
+
+
 
 <pre><code>def find_word(words, n):
     &quot;&quot;&quot;

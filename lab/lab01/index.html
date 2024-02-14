@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width">
+
     <meta name="description" content ="C88C: Computational Structures in Data Science" />
     <meta name="keywords" content ="CS88, C88C, Computer Science, Data Science, Programming, Berkeley, EECS, Python, intro CS, comp sci" />
     <meta name="author" content ="Michael Ball, Ethan Yoo, Rebecca Dang, Michelle Chen, Ramya Chitturi, John Teng, Karim El-Refai, Liliana Gonzalez, Angela Bi, Sean Yang, Christy Quang, Morgan Dehdashti, Miha Bhaskaran, Satleen Gill, Richik Pal" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="/sp24/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/sp24/assets/css/style.css">
@@ -798,11 +799,17 @@ and <code>&#x2d;1 != 0</code>, and <code>y = 1 &gt; 0</code>, so both clauses ar
 <p>Write a function that takes in a nonnegative integer and sums its digits. (Using
 floor division and modulo might be helpful here!)</p>
 
+<blockquote><p>Hint: Consider how numbers are represented in decimal form, with ones, tens, hundreds, etc. What can we use to floor/mod a value to get the ones/tens/hundreds etc. digit?</p></blockquote>
+
 
 
 <pre><code>def sum_digits(n):
     &quot;&quot;&quot;Sum all the digits of n.
 
+    &gt;&gt;&gt; sum_digits(5)
+    5
+    &gt;&gt;&gt; sum_digits(34) # 3 + 4 = 7
+    7
     &gt;&gt;&gt; sum_digits(10) # 1 + 0 = 1
     1
     &gt;&gt;&gt; sum_digits(4224) # 4 + 2 + 2 + 4 = 12
