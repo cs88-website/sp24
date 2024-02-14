@@ -12,7 +12,7 @@ person['name']
 # 'Michael'
 person.get('name')
 # 'Michael'
-person['email'] = 'ball@berkeley.edu'
+# person['email'] = 'ball@berkeley.edu'
 person
 # {'name': 'Michael', 'email': 'ball@berkeley'}
 'phone' in person
@@ -47,7 +47,7 @@ words['there'] = 5
 words
 # {'One': 3, 'upon': 4, 'a': 1, 'time': 4, 'there': 5}
 d = { 'a': 'b', 'hello': True }
-d[ [1, 2] ] = 5
+# d[ [1, 2] ] = 5
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
 # TypeError: unhashable type: 'list'
