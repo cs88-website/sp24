@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width">
+
+    <meta name="description" content ="C88C: Computational Structures in Data Science" />
+    <meta name="keywords" content ="CS88, C88C, Computer Science, Data Science, Programming, Berkeley, EECS, Python, intro CS, comp sci" />
+    <meta name="author" content ="Michael Ball, Ethan Yoo, Rebecca Dang, Michelle Chen, Ramya Chitturi, John Teng, Karim El-Refai, Liliana Gonzalez, Angela Bi, Sean Yang, Christy Quang, Morgan Dehdashti, Miha Bhaskaran, Satleen Gill, Richik Pal" />
+
+    <link rel="stylesheet" href="/sp24/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/sp24/assets/css/style.css">
+    <link rel="icon" href="/sp24/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/sp24/assets/css/mono-blue.css">
+
+    
+
+    <title> C88C Spring 2024</title>
+
+  </head>
+
+  <body id="index" class="home">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section" aria-label="Toggle Nav Menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/sp24/">C88C</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-section">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/sp24/">Calendar</a></li>
+            <li><a href="/sp24/articles/resources.html">Resources</a></li>
+            <li><a href="/sp24/weekly-schedule.html">Google Calendar</a></li>
+            <li><a href="/sp24/articles/about.html">Syllabus</a></li>
+            <li><a href="https://edstem.org/us/courses/51226/discussion/" target="_blank">Ed</a></li>
+            <li><a href="/sp24/staff.html">Staff</a></li>
+            <li><a href="https://oh.c88c.org/" target="_blank">OH Queue</a></li>
+            <li><a href="https://tutor.cs61a.org/" target="_blank">Python Tutor</a></li>
+            <li><a href="https://bcourses.berkeley.edu/courses/1531774/external_tools/90481" target="_blank">Recordings</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+
+    <div id="content" class="container">
+      <div class='page-header'>
+  <h1>
+    <span class="content-title-brand">CS 88</span>:
+    Computational Structures in Data Science
+    <img src = "assets/images/cs88-logo.png" alt = "c88c logo" style="float:right;width:150px;height:150px;">
+    <div class="small">Spring 2024</div>
+    <div class="small">Instructor: Michael Ball</div>
+  </h1>
+  <h3>
+    M & W 2pm - 3pm PT Dwinelle 155
+  </h3>
+</div>
+
+<section>
+  <h2>Announcements</h2>
+
+  <div id="assignment-quick-list"></div>
+
+  <div id='announcements'>
+    
+    <div class="announcement" id='announcement-0'>
+        
+        <ul class="pager" role="none">
+            <li class='announcement-btn-newer'>
+                <a href="#" aria-label="next announcement">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    newer
+                </a>
+            </li>
+            <li>
+                <span class="announcement-date">Monday, 02/12</span>
+            </li>
+            <li class='announcement-btn-older'>
+                <a href="#" aria-label="previous announcement">
+                    older
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+        
+        <h1 id="welcome-to-c88c-spring-2024-week-5">Welcome to C88C Spring 2024 Week 5️⃣!</h1>
+
+<small>Feb 12, 2024</small>
+
+
+<h2 id="this-week-s-class">This Week's Class</h2>
+
+
+<ul>
+  <li>Note: Self-Checks got off by a couple of lectures. :(
+  Self-Checks 7 and 8 arguably should be swapped, sorry!</li>
+</ul>
+
+
+<h3 id="lecture-8-environments-and-lambdas">Lecture 8: Environments and Lambdas</h3>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa8">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/8">Self-Check</a></li>
+</ul>
+
+
+<h3 id="lecture-9-dictionaries-and-mutable-data">Lecture 9: Dictionaries and Mutable Data</h3>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa9">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/9">Self-Check</a></li>
+</ul>
+    </div>
+    
+
+    <div class="announcement" id='announcement-1'>
+        
+        <ul class="pager" role="none">
+            <li class='announcement-btn-newer'>
+                <a href="#" aria-label="next announcement">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    newer
+                </a>
+            </li>
+            <li>
+                <span class="announcement-date">Monday, 02/05</span>
+            </li>
+            <li class='announcement-btn-older'>
+                <a href="#" aria-label="previous announcement">
+                    older
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+        
+        <h1 id="welcome-to-c88c-spring-2024-week-4">Welcome to C88C Spring 2024 Week 4️⃣!</h1>
+
+<small>Feb 5, 2024</small>
+
+
+<h2 id="this-week-s-class">This Week's Class</h2>
+
+
+
+<h3 id="lecture-6-lists-and-hofs">Lecture 6: Lists and HOFs</h3>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa6">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/6">Self-Check</a></li>
+</ul>
+
+
+<h3 id="lecture-7-hofs-and-environments">Lecture 7: HOFs and Environments</h3>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa7">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/7">Self-Check</a></li>
+</ul>
+    </div>
+    
+
+    <div class="announcement" id='announcement-2'>
+        
+        <ul class="pager" role="none">
+            <li class='announcement-btn-newer'>
+                <a href="#" aria-label="next announcement">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    newer
+                </a>
+            </li>
+            <li>
+                <span class="announcement-date">Monday, 01/29</span>
+            </li>
+            <li class='announcement-btn-older'>
+                <a href="#" aria-label="previous announcement">
+                    older
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+        
+        <h1 id="welcome-to-c88c-spring-2024-week-3">Welcome to C88C Spring 2024 Week 3️⃣!</h1>
+
+<small>Jan 29, 2024</small>
+
+
+<h2 id="lecture-4-sequences-amp-for-loops">Lecture 4: Sequences &amp; For Loops</h2>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa4">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/4">Self-Check</a></li>
+</ul>
+
+
+<h2 id="lecture-5-higher-order-functions">Lecture 5: Higher Order Functions</h2>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa5">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/5">Self-Check</a></li>
+</ul>
+
+<hr/>
+
+<blockquote><p style="font-size: 1.5rem">⚠️ Consider the dates on this calendar tenative until this message is removed.</p></blockquote>
+    </div>
+    
+
+    <div class="announcement" id='announcement-3'>
+        
+        <ul class="pager" role="none">
+            <li class='announcement-btn-newer'>
+                <a href="#" aria-label="next announcement">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    newer
+                </a>
+            </li>
+            <li>
+                <span class="announcement-date">Monday, 01/22</span>
+            </li>
+            <li class='announcement-btn-older'>
+                <a href="#" aria-label="previous announcement">
+                    older
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+        
+        <h1 id="welcome-to-c88c-spring-2024-week-2">Welcome to C88C Spring 2024 Week 2️⃣!</h1>
+
+<small>Jan 22, 2024</small>
+
+
+<h2 id="lecture-2-functions">Lecture 2: Functions</h2>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa2">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/2">Self-Check</a></li>
+</ul>
+
+
+<h2 id="lecture-3-functions-amp-loops">Lecture 3: Functions &amp; Loops</h2>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa3">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/3">Self-Check</a></li>
+</ul>
+
+<hr/>
+
+<blockquote><p style="font-size: 1.5rem">⚠️ Consider the dates on this calendar tenative until this message is removed.</p></blockquote>
+
+<hr/>
+
+
+<h3 id="enrollment-notes"><em>Enrollment Notes:</em></h3>
+
+
+<p><strong>Prereq's and General Questions:</strong></p>
+
+<p>If you have questions about enrollment, please reach out to <a href="https://data.berkeley.edu/ds-advising">Data Science Adivsing</a>.
+STAT20, and other prereqs will be approved, but only the advisors have access to CalCentral enrollments.</p>
+
+<p><strong>Waitlisted Students:</strong></p>
+
+<p>Waitlisted students will have access to all course content, and are expected to keep up with the course.</p>
+
+<p><strong>Concurrent Enrollment:</strong></p>
+
+<p>Concurrent enrollment applications will not be processed for 2-4 weeks.
+In the meantime, you will be added to bCourses and should keep up with the course.</p>
+    </div>
+    
+
+    <div class="announcement" id='announcement-4'>
+        
+        <ul class="pager" role="none">
+            <li class='announcement-btn-newer'>
+                <a href="#" aria-label="next announcement">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    newer
+                </a>
+            </li>
+            <li>
+                <span class="announcement-date">Wednesday, 01/17</span>
+            </li>
+            <li class='announcement-btn-older'>
+                <a href="#" aria-label="previous announcement">
+                    older
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+        
+        <h1 id="welcome-to-c88c-spring-2024-week-1">Welcome to C88C Spring 2024 Week 1️⃣!</h1>
+
+<small>Jan 17, 2024</small>
+
+
+<h2 id="lecture-1-welcome">Lecture 1: Welcome</h2>
+
+
+<ul>
+  <li><a href="https://go.c88c.org/qa1">Q&amp;A</a></li>
+  <li><a href="https://go.c88c.org/1">Self-Check</a></li>
+</ul>
+
+<hr/>
+
+<blockquote><p style="font-size: 1.5rem">⚠️ Consider the dates on this calendar tenative until this message is removed.</p></blockquote>
+
+<hr/>
+
+
+<h3 id="enrollment-notes"><em>Enrollment Notes:</em></h3>
+
+
+<p><strong>Prereq's and General Questions:</strong></p>
+
+<p>If you have questions about enrollment, please reach out to <a href="https://data.berkeley.edu/ds-advising">Data Science Adivsing</a>.
+STAT20, and other prereqs will be approved, but only the advisors have access to CalCentral enrollments.</p>
+
+<p><strong>Waitlisted Students:</strong></p>
+
+<p>Waitlisted students will have access to all course content, and are expected to keep up with the course.</p>
+
+<p><strong>Concurrent Enrollment:</strong></p>
+
+<p>Concurrent enrollment applications will not be processed for 2-4 weeks.
+In the meantime, you may be added to bCourses and should keep up with the course.</p>
+
+<p>We will add all Conccurrent enrollment/BGA/Globe students to bCourses during the end of week 1.</p>
+    </div>
+    
+
+    <div class="announcement" id='announcement-5'>
+        
+        <ul class="pager" role="none">
+            <li class='announcement-btn-newer'>
+                <a href="#" aria-label="next announcement">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    newer
+                </a>
+            </li>
+            <li>
+                <span class="announcement-date">Monday, 01/15</span>
+            </li>
+            <li class='announcement-btn-older'>
+                <a href="#" aria-label="previous announcement">
+                    older
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+        
+        <h1 id="welcome-to-c88c-spring-2024">Welcome to C88C Spring 2024!</h1>
+
+
+<p><strong>Our first lecture will be on Wednesday, Jan 16</strong></p>
+
+<p>We're looking forward to seeing everyone!!</p>
+
+<hr/>
+
+
+<h3 id="enrollment-notes"><em>Enrollment Notes:</em></h3>
+
+
+<p><strong>Prereq's and General Questions:</strong></p>
+
+<p>If you have questions about enrollment, please reach out to <a href="https://data.berkeley.edu/ds-advising">Data Science Adivsing</a>.
+STAT20, and other prereqs will be approved, but only the advisors have access to CalCentral enrollments.</p>
+
+<p><strong>Waitlisted Students:</strong></p>
+
+<p>Waitlisted students will have access to all course content, and are expected to keep up with the course.</p>
+
+<p><strong>Concurrent Enrollment:</strong></p>
+
+<p>Concurrent enrollment applications will not be processed for 2-4 weeks.
+In the meantime, you may be added to bCourses and should keep up with the course.</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- <div id='resources'>
+  <div id='resources-description'>
+    Resource/Piazza Search <br/>
+    <small>Search for terms like "recursion", "homework 3", or "practice"</small>
+  </div>
+
+  <div id='resources-input'>
+    <input type='text' id='resources-search-box' class='search' placeholder='Search for resources/posts on Piazza'>
+  </div>
+
+  <div id='resources-display'>
+    
+    <table id='resource-table' class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            
+        <tr>
+            <td class='resource-name'>Midterm 7-9 PM</td>
+            <td class='resource-type'>Exam</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Final Exam 11:30 AM - 2:30 PM</td>
+            <td class='resource-type'>Exam</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Maps</td>
+            <td class='resource-type'>Project</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Maps Checkpoint</td>
+            <td class='resource-type'>Project</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Maps</td>
+            <td class='resource-type'>Project</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Ants Checkpoint</td>
+            <td class='resource-type'>Project</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Ants</td>
+            <td class='resource-type'>Project</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Ants</td>
+            <td class='resource-type'>Project</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 1: 1: Welcome & Intro
+<a href="https://go.c88c.org/qa1" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858521" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/01-Welcome.pdf" class="label label-outline", target="_blank">Slides</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/12-elements-of-programming.html#" class="", target="">Readings: section 1.2</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/21-introduction.html#" class="", target="">Readings: section 2.1</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 2: 2: Abstractions & Functions
+<a href="https://go.c88c.org/qa2" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858523" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/02-Functions.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/02-Functions.py" class="label label-outline", target="_blank">py</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="", target="">Readings: section 1.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="", target="">Readings: section 1.4</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/15-control.html#" class="", target="">Readings: section 1.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 3: 3: Loops & Functions
+<a href="https://go.c88c.org/qa3" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858511" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/03-Loops.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/03-Loops.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/03-Loops.txt" class="label label-outline", target="_blank">txt</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="", target="">Readings: section 1.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="", target="">Readings: section 1.4</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/15-control.html#" class="", target="">Readings: section 1.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 4: 4: Sequences & For Loops
+<a href="https://go.c88c.org/qa4" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858506" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/04-Sequences.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/04-Sequences.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/04-Sequences.txt" class="label label-outline", target="_blank">txt</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/23-sequences.html#" class="", target="">Readings: section 2.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 5: 5: Higher Order Functions
+<a href="https://go.c88c.org/qa5" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858524" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/05-HOFs.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/05-HOFs.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/05-HOFs.txt" class="label label-outline", target="_blank">txt</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="", target="">Readings: section 1.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="", target="">Readings: section 1.4</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/15-control.html#" class="", target="">Readings: section 1.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 6: 6: Lists & HOFs
+<a href="https://go.c88c.org/qa6" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/5N6H4E_0rHc" class="label label-outline", target="_blank">Fa 21</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858526" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/06-Lists_HOFs.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/06-Lists_HOFs.py" class="label label-outline", target="_blank">py</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="", target="">Readings: section 1.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="", target="">Readings: section 1.4</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/15-control.html#" class="", target="">Readings: section 1.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 7: 7: HOFs and Environment Diagrams
+<a href="https://go.c88c.org/qa7" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/ZaE-rV3BwXE" class="label label-outline", target="_blank">Sp 22</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858519" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/07-HOFs_Environments.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/07-HOFs_Environments.py" class="label label-outline", target="_blank">py</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/16-higher-order-functions.html#" class="", target="">Readings: section 1.6</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 8: 8: Enviornments and Lambdas
+<a href="https://go.c88c.org/qa8" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/d27flP070xE" class="label label-outline", target="_blank">Sp 22</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858529" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/08-Environments.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/08-Environments.py" class="label label-outline", target="_blank">py</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/16-higher-order-functions.html#" class="", target="">Readings: section 1.6</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 9: 9: Mutable Data
+<a href="https://go.c88c.org/qa9" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/hZ20bzTU6Y0" class="label label-outline", target="_blank">Fa 22</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858537" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/09-Mutable_Data.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/09-Mutable_Data.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/09-Mutable_Data.txt" class="label label-outline", target="_blank">txt</a></td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/24-mutable-data.html#" class="", target="">Readings: section 2.4</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/33-exceptions.html#" class="", target="">Readings: section 3.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 10: 10: Abstract Data Types and Dictionaries</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/22-data-abstraction.html#" class="", target="">Readings: section 2.2</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="", target="">Readings: section 2.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/26-implementing-classes-and-objects.html#" class="", target="">Readings: section 2.6</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 11: 11: Recursion</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/17-recursive-functions.html#" class="", target="">Readings: section 1.7</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 12: 12: Tree Recursion</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/17-recursive-functions.html#tree-recursion" class="", target="">Readings: section 1.7</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 13: 13: Object-Oriented Programming (OOP)</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="", target="">Readings: section 2.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/26-implementing-classes-and-objects.html#" class="", target="">Readings: section 2.6</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/27-object-abstraction.html#" class="", target="">Readings: section 2.7</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 14: 14: OOP - Inheritance</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="", target="">Readings: section 2.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/27-object-abstraction.html#" class="", target="">Readings: section 2.7</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 15: 15: More Object Oriented Programming</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="", target="">Readings: section 2.5</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/27-object-abstraction.html#" class="", target="">Readings: section 2.7</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 16: 16: More Recursion / MT Review</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 17: 17: Data Structures: Linked Lists</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/29-recursive-objects.html#" class="", target="">Readings: section 2.9</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 18: 18: Guest TBD - Efficiency</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/28-efficiency.html#" class="", target="">Readings: section 2.8</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 19: 19: Guest TBD - Exceptions</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/24-mutable-data.html#" class="", target="">Readings: section 2.4</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/33-exceptions.html#" class="", target="">Readings: section 3.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 20: 20: Data Structures: Trees</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/29-recursive-objects.html#" class="", target="">Readings: section 2.9</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 21: 21: Programming Paradigms</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 22: 22: Iterators and Generators</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/42-implicit-sequences.html#" class="", target="">Readings: section 4.2</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 23: 23: More Iterators and Generators</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/42-implicit-sequences.html#" class="", target="">Readings: section 4.2</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 24: 24: Databases and SQL</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/43-declarative-programming.html#" class="", target="">Readings: section 4.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 25: 25: SQL</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.composingprograms.com/pages/43-declarative-programming.html#" class="", target="">Readings: section 4.3</a></td>
+            <td class='resource-type'>Reading</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lecture 26: 26: Review and Wrap Up</td>
+            <td class='resource-type'>Lecture</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="lab/lab00/" class="", target="">Lab 0: Community and Setup</a> Solutions</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="lab/lab01/" class="", target="">Lab 1: Control and Functions</a> Solutions</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="lab/lab02/" class="", target="">Lab 2: Lists, List Comprehension and Iteration</a> Solutions</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="lab/lab03/" class="", target="">Lab 3: Environments and Higher Order Functions</a> Solutions</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="lab/lab04/" class="", target="">Lab 4: Lambdas and Dictionaries</a></td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 5: ADTs</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 6: Recursion</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 7: OOP</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 8: Inheritance + Linked Lists</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 9: TBD</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 10: Trees + Exceptions</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 11: Iterators and Generators</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 12: SQL</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lab 13: Practice: Final Review</td>
+            <td class='resource-type'>Lab</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="disc/disc00.pdf" class="", target="">Discussion 0: Intro Disc (Not Real)</a> <a href="disc/disc00_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+            <td class='resource-type'>Discussion</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="disc/disc01.pdf" class="", target="">Discussion 1: Control and Iteration</a> <a href="disc/disc01_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+            <td class='resource-type'>Discussion</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="disc/disc02.pdf" class="", target="">Discussion 2: Lists and List Comprehensions</a> <a href="disc/disc02_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+            <td class='resource-type'>Discussion</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="disc/disc03.pdf" class="", target="">Discussion 3: HOFs and Environment Diagrams</a> <a href="disc/disc03_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+            <td class='resource-type'>Discussion</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="disc/disc04.pdf" class="", target="">Discussion 4: Lambdas and Dictionaries</a> <a href="disc/disc04_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+            <td class='resource-type'>Discussion</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="hw/hw01/" class="", target="">Homework 1</a> Solutions</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="hw/hw02/" class="", target="">Homework 2</a> Solutions</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="hw/hw03/" class="", target="">Homework 3</a></td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="hw/hw04/" class="", target="">Homework 4</a></td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Homework 5</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Homework 6</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Homework 7</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Homework 8</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Homework 9</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Homework 10</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Homework 11</td>
+            <td class='resource-type'>Homework</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/about.html" class="", target="">Syllabus</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/composition.html" class="", target="">Composition Guide</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Programming</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/debugging.html" class="", target="">Debugging Guide</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Programming</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/using-ok.html" class="", target="">Using OK</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>OK</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/unix.html" class="", target="">UNIX Tutorial</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>UNIX</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/sublime.html" class="", target="">Sublime Text</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Text Editors</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/vim.html" class="", target="">Vim</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Text Editors</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="articles/emacs.html" class="", target="">Emacs</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Text Editors</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="weekly-schedule.html" class="", target="">Weekly Schedule</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="staff.html" class="", target="">Staff</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://www.youtube.com/watch?v=54-wuFsPi0w" class="", target="">Windows: set up Python</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Setting up</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://www.youtube.com/watch?v=gDDaz6Sb8jo" class="", target="">Windows: connecting from home (video)</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Setting up</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://inst.eecs.berkeley.edu/~cs61a/fa13/pdfs/connect-windows.pdf" class="", target="">Windows: connecting form home (pdf)</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Setting up</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://www.youtube.com/watch?v=smHuBHxJdK8" class="", target="">Mac: set up Python</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Setting up</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://www.youtube.com/watch?v=6tQx-J4nBSY" class="", target="">Mac: set up Emacs</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Setting up</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://www.youtube.com/watch?v=irwlU7esODA" class="", target="">Mac: connecting from home (video)</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Setting up</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://inst.eecs.berkeley.edu/~cs61a/fa13/pdfs/connect-mac.pdf" class="", target="">Mac: connecting from home (pdf)</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Setting up</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://tutor.composingprograms.com/visualize.html" class="", target="">Online Python tutor</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Environment Diagrams</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.youtube.com/playlist?list=PL-XXv-cvA_iBM29DgZsGaQihJp8lLQn3J" class="", target="">Spring 2015 screencasts</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Video, John DeNero</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="https://www.youtube.com/playlist?list=PL-XXv-cvA_iDbsAvTYyJnMkObr12IIkyg" class="", target="">Fall 2014 screencasts</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Video, John DeNero</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://www.youtube.com/view_play_list?p=-XXv-cvA_iCIEwJhyDVdyLMCiimv6Tup" class="", target="">Fall 2013 screencasts</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>Video, John DeNero</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/" class="", target="">Another UNIX tutorial</a></td>
+            <td class='resource-type'>Article</td>
+            <td class='resource-tags'>UNIX</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://albertwu.org/cs61a/" class="", target="">Albert Wu's practice problems</a></td>
+            <td class='resource-type'>Practice</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'><a href="http://markmiyashita.com/cs61a/sp14/practice/" class="", target="">Mark Miyashita's practice problems</a></td>
+            <td class='resource-type'>Practice</td>
+            <td class='resource-tags'></td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Functions and expressions practice problems</td>
+            <td class='resource-type'>Practice</td>
+            <td class='resource-tags'>Functions</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Control structures practice problems</td>
+            <td class='resource-type'>Practice</td>
+            <td class='resource-tags'>Control Structures</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Higher Order Functions practice problems</td>
+            <td class='resource-type'>Practice</td>
+            <td class='resource-tags'>Higher Order Functions</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Lambda expressions practice problems</td>
+            <td class='resource-type'>Practice</td>
+            <td class='resource-tags'>Lambdas</td>
+        </tr>
+
+        <tr>
+            <td class='resource-name'>Recursion practice problems</td>
+            <td class='resource-type'>Practice</td>
+            <td class='resource-tags'>Recursion, Tree Recursion</td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+</div> -->
+
+<section>
+  <h2>Calendar</h2>
+
+  <div class="table-responsive">
+    <table id="calendar">
+
+        <tr>
+            <th scope="col">Wk</th>
+<th scope="col">Date</th>
+<th scope="col">Lecture</th>
+<th scope="col">Reading</th>
+<th scope="col">Lab & Discussion</th>
+<th scope="col">Assignments</th>
+        </tr>
+<tr>
+<td rowspan="2" class="weeknum odd">1</td>
+<td>Mon 1/15</td>
+<td>No Lecture: MLK Day</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed 1/17</td>
+<td>1: Welcome & Intro
+<br/>
+<a href="https://go.c88c.org/qa1" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858521" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/01-Welcome.pdf" class="label label-outline", target="_blank">Slides</a></td>
+<td><a href="https://www.composingprograms.com/pages/12-elements-of-programming.html#" class="label label-outline", target="_blank">1.2</a><br/>
+<a href="https://www.composingprograms.com/pages/21-introduction.html#" class="label label-outline", target="_blank">2.1</a></td>
+<td><a href="lab/lab00/" class="", target="">Lab 0: Community and Setup</a><br/><time class="label label-primary" datetime=2024-01-23T00:00:00>due Tue 1/23</time> Solutions</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum even">2</td>
+<td>Mon 1/22</td>
+<td>2: Abstractions & Functions
+<br/>
+<a href="https://go.c88c.org/qa2" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858523" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/02-Functions.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/02-Functions.py" class="label label-outline", target="_blank">py</a></td>
+<td><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="label label-outline", target="_blank">1.3</a><br/>
+<a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="label label-outline", target="_blank">1.4</a><br/>
+<a href="https://www.composingprograms.com/pages/15-control.html#" class="label label-outline", target="_blank">1.5</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 1/23</td>
+<td></td>
+<td></td>
+<td><a href="lab/lab01/" class="", target="">Lab 1: Control and Functions</a><br/><time class="label label-primary" datetime=2024-01-30T00:00:00>due Tue 1/30</time> Solutions</td>
+<td><a href="hw/hw01/" class="", target="">Homework 1</a><br/><time class="label label-primary" datetime=2024-02-01T00:00:00>due Thu 2/1</time> Solutions</td>
+</tr>
+<tr>
+<td>Wed 1/24</td>
+<td>3: Loops & Functions
+<br/>
+<a href="https://go.c88c.org/qa3" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858511" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/03-Loops.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/03-Loops.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/03-Loops.txt" class="label label-outline", target="_blank">txt</a></td>
+<td><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="label label-outline", target="_blank">1.3</a><br/>
+<a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="label label-outline", target="_blank">1.4</a><br/>
+<a href="https://www.composingprograms.com/pages/15-control.html#" class="label label-outline", target="_blank">1.5</a></td>
+<td><a href="disc/disc01.pdf" class="", target="">Discussion 1: Control and Iteration</a> <a href="disc/disc01_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum odd">3</td>
+<td>Mon 1/29</td>
+<td>4: Sequences & For Loops
+<br/>
+<a href="https://go.c88c.org/qa4" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858506" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/04-Sequences.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/04-Sequences.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/04-Sequences.txt" class="label label-outline", target="_blank">txt</a></td>
+<td><a href="https://www.composingprograms.com/pages/23-sequences.html#" class="label label-outline", target="_blank">2.3</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 1/30</td>
+<td></td>
+<td></td>
+<td><a href="lab/lab02/" class="", target="">Lab 2: Lists, List Comprehension and Iteration</a><br/><time class="label label-primary" datetime=2024-02-06T00:00:00>due Tue 2/6</time> Solutions</td>
+<td><a href="hw/hw02/" class="", target="">Homework 2</a><br/><time class="label label-primary" datetime=2024-02-08T00:00:00>due Thu 2/8</time> Solutions</td>
+</tr>
+<tr>
+<td>Wed 1/31</td>
+<td>5: Higher Order Functions
+<br/>
+<a href="https://go.c88c.org/qa5" class="label label-outline", target="_blank">Q&A</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858524" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/05-HOFs.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/05-HOFs.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/05-HOFs.txt" class="label label-outline", target="_blank">txt</a></td>
+<td><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="label label-outline", target="_blank">1.3</a><br/>
+<a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="label label-outline", target="_blank">1.4</a><br/>
+<a href="https://www.composingprograms.com/pages/15-control.html#" class="label label-outline", target="_blank">1.5</a></td>
+<td><a href="disc/disc02.pdf" class="", target="">Discussion 2: Lists and List Comprehensions</a> <a href="disc/disc02_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum even">4</td>
+<td>Mon 2/5</td>
+<td>6: Lists & HOFs
+<br/>
+<a href="https://go.c88c.org/qa6" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/5N6H4E_0rHc" class="label label-outline", target="_blank">Fa 21</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858526" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/06-Lists_HOFs.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/06-Lists_HOFs.py" class="label label-outline", target="_blank">py</a></td>
+<td><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html#" class="label label-outline", target="_blank">1.3</a><br/>
+<a href="https://www.composingprograms.com/pages/14-designing-functions.html#" class="label label-outline", target="_blank">1.4</a><br/>
+<a href="https://www.composingprograms.com/pages/15-control.html#" class="label label-outline", target="_blank">1.5</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 2/6</td>
+<td></td>
+<td></td>
+<td><a href="lab/lab03/" class="", target="">Lab 3: Environments and Higher Order Functions</a><br/><time class="label label-primary" datetime=2024-02-13T00:00:00>due Tue 2/13</time> Solutions</td>
+<td><a href="hw/hw03/" class="", target="">Homework 3</a><br/><time class="label label-primary" datetime=2024-02-15T00:00:00>due Thu 2/15</time></td>
+</tr>
+<tr>
+<td>Wed 2/7</td>
+<td>7: HOFs and Environment Diagrams
+<br/>
+<a href="https://go.c88c.org/qa7" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/ZaE-rV3BwXE" class="label label-outline", target="_blank">Sp 22</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858519" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/07-HOFs_Environments.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/07-HOFs_Environments.py" class="label label-outline", target="_blank">py</a></td>
+<td><a href="https://www.composingprograms.com/pages/16-higher-order-functions.html#" class="label label-outline", target="_blank">1.6</a></td>
+<td><a href="disc/disc03.pdf" class="", target="">Discussion 3: HOFs and Environment Diagrams</a> <a href="disc/disc03_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum odd">5</td>
+<td>Mon 2/12</td>
+<td>8: Enviornments and Lambdas
+<br/>
+<a href="https://go.c88c.org/qa8" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/d27flP070xE" class="label label-outline", target="_blank">Sp 22</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858529" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/08-Environments.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/08-Environments.py" class="label label-outline", target="_blank">py</a></td>
+<td><a href="https://www.composingprograms.com/pages/16-higher-order-functions.html#" class="label label-outline", target="_blank">1.6</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 2/13</td>
+<td></td>
+<td></td>
+<td><a href="lab/lab04/" class="", target="">Lab 4: Lambdas and Dictionaries</a><br/><time class="label label-primary" datetime=2024-02-20T00:00:00>due Tue 2/20</time></td>
+<td><a href="hw/hw04/" class="", target="">Homework 4</a><br/><time class="label label-primary" datetime=2024-02-22T00:00:00>due Thu 2/22</time></td>
+</tr>
+<tr>
+<td>Wed 2/14</td>
+<td>9: Mutable Data
+<br/>
+<a href="https://go.c88c.org/qa9" class="label label-outline", target="_blank">Q&A</a> <a href="https://youtu.be/hZ20bzTU6Y0" class="label label-outline", target="_blank">Fa 22</a> <a href="https://www.gradescope.com/courses/693229/assignments/3858537" class="label label-outline", target="_blank">Self-Check</a> <a href="assets/slides/sp24/09-Mutable_Data.pdf" class="label label-outline", target="_blank">Slides</a> <a href="assets/slides/sp24/09-Mutable_Data.py" class="label label-outline", target="_blank">py</a> <a href="assets/slides/sp24/09-Mutable_Data.txt" class="label label-outline", target="_blank">txt</a></td>
+<td><a href="https://www.composingprograms.com/pages/24-mutable-data.html#" class="label label-outline", target="_blank">2.4</a><br/>
+<a href="https://www.composingprograms.com/pages/33-exceptions.html#" class="label label-outline", target="_blank">3.3</a></td>
+<td><a href="disc/disc04.pdf" class="", target="">Discussion 4: Lambdas and Dictionaries</a> <a href="disc/disc04_sol.pdf" class="label label-outline", target="">Solutions</a></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum even">6</td>
+<td>Mon 2/19</td>
+<td>No Lecture: President's Day</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 2/20</td>
+<td></td>
+<td></td>
+<td>Lab 5: ADTs<br/><time class="label label-primary" datetime=2024-02-27T00:00:00>due Tue 2/27</time></td>
+<td>Homework 5<br/><time class="label label-primary" datetime=2024-02-29T00:00:00>due Thu 2/29</time><br/>
+Maps<br/><time class="label label-primary" datetime=2024-03-08T00:00:00>due Fri 3/8</time></td>
+</tr>
+<tr>
+<td>Wed 2/21</td>
+<td>10: Abstract Data Types and Dictionaries</td>
+<td><a href="https://www.composingprograms.com/pages/22-data-abstraction.html#" class="label label-outline", target="_blank">2.2</a><br/>
+<a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="label label-outline", target="_blank">2.5</a><br/>
+<a href="https://www.composingprograms.com/pages/26-implementing-classes-and-objects.html#" class="label label-outline", target="_blank">2.6</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum odd">7</td>
+<td>Mon 2/26</td>
+<td>11: Recursion</td>
+<td><a href="https://www.composingprograms.com/pages/17-recursive-functions.html#" class="label label-outline", target="_blank">1.7</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 2/27</td>
+<td></td>
+<td></td>
+<td>Lab 6: Recursion<br/><time class="label label-primary" datetime=2024-03-05T00:00:00>due Tue 3/5</time></td>
+<td>Homework 6<br/><time class="label label-primary" datetime=2024-03-07T00:00:00>due Thu 3/7</time></td>
+</tr>
+<tr>
+<td>Wed 2/28</td>
+<td>12: Tree Recursion</td>
+<td><a href="https://www.composingprograms.com/pages/17-recursive-functions.html#tree-recursion" class="label label-outline", target="_blank">1.7</a></td>
+<td></td>
+<td>Maps Checkpoint<br/><time class="label label-primary" datetime=2024-02-28T00:00:00>due Wed 2/28</time></td>
+</tr>
+<tr>
+<td rowspan="4" class="weeknum even">8</td>
+<td>Mon 3/4</td>
+<td>13: Object-Oriented Programming (OOP)</td>
+<td><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="label label-outline", target="_blank">2.5</a><br/>
+<a href="https://www.composingprograms.com/pages/26-implementing-classes-and-objects.html#" class="label label-outline", target="_blank">2.6</a><br/>
+<a href="https://www.composingprograms.com/pages/27-object-abstraction.html#" class="label label-outline", target="_blank">2.7</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 3/5</td>
+<td></td>
+<td></td>
+<td>Lab 7: OOP<br/><time class="label label-primary" datetime=2024-03-12T00:00:00>due Tue 3/12</time></td>
+<td>Homework 7<br/><time class="label label-primary" datetime=2024-03-14T00:00:00>due Thu 3/14</time></td>
+</tr>
+<tr>
+<td>Wed 3/6</td>
+<td>14: OOP - Inheritance</td>
+<td><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="label label-outline", target="_blank">2.5</a><br/>
+<a href="https://www.composingprograms.com/pages/27-object-abstraction.html#" class="label label-outline", target="_blank">2.7</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri 3/8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Maps<br/><time class="label label-primary" datetime=2024-03-08T00:00:00>due Fri 3/8</time></td>
+</tr>
+<tr>
+<td rowspan="4" class="weeknum odd">9</td>
+<td>Mon 3/11</td>
+<td>15: More Object Oriented Programming</td>
+<td><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html#" class="label label-outline", target="_blank">2.5</a><br/>
+<a href="https://www.composingprograms.com/pages/27-object-abstraction.html#" class="label label-outline", target="_blank">2.7</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 3/12</td>
+<td></td>
+<td></td>
+<td>Lab 8: Inheritance + Linked Lists<br/><time class="label label-primary" datetime=2024-03-19T00:00:00>due Tue 3/19</time></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed 3/13</td>
+<td>16: More Recursion / MT Review</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu 3/14</td>
+<td>Midterm 7-9 PM</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum even">10</td>
+<td>Mon 3/18</td>
+<td>17: Data Structures: Linked Lists</td>
+<td><a href="https://www.composingprograms.com/pages/29-recursive-objects.html#" class="label label-outline", target="_blank">2.9</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 3/19</td>
+<td></td>
+<td></td>
+<td>Lab 9: TBD<br/><time class="label label-primary" datetime=2024-03-26T00:00:00>due Tue 3/26</time></td>
+<td>Homework 8<br/><time class="label label-primary" datetime=2024-03-28T00:00:00>due Thu 3/28</time></td>
+</tr>
+<tr>
+<td>Wed 3/20</td>
+<td>18: Guest TBD - Efficiency</td>
+<td><a href="https://www.composingprograms.com/pages/28-efficiency.html#" class="label label-outline", target="_blank">2.8</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2" class="weeknum odd">11</td>
+<td>Mon 3/25</td>
+<td>No Lecture: Spring Break</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed 3/27</td>
+<td>No Lecture: Spring Break</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum even">12</td>
+<td>Mon 4/1</td>
+<td>19: Guest TBD - Exceptions</td>
+<td><a href="https://www.composingprograms.com/pages/24-mutable-data.html#" class="label label-outline", target="_blank">2.4</a><br/>
+<a href="https://www.composingprograms.com/pages/33-exceptions.html#" class="label label-outline", target="_blank">3.3</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 4/2</td>
+<td></td>
+<td></td>
+<td>Lab 10: Trees + Exceptions<br/><time class="label label-primary" datetime=2024-04-09T00:00:00>due Tue 4/9</time></td>
+<td>Homework 9<br/><time class="label label-primary" datetime=2024-04-11T00:00:00>due Thu 4/11</time></td>
+</tr>
+<tr>
+<td>Wed 4/3</td>
+<td>20: Data Structures: Trees</td>
+<td><a href="https://www.composingprograms.com/pages/29-recursive-objects.html#" class="label label-outline", target="_blank">2.9</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum odd">13</td>
+<td>Mon 4/8</td>
+<td>21: Programming Paradigms</td>
+<td></td>
+<td></td>
+<td>Ants Checkpoint<br/><time class="label label-primary" datetime=2024-04-17T00:00:00>due Wed 4/17</time><br/>
+Ants<br/><time class="label label-primary" datetime=2024-04-24T00:00:00>due Wed 4/24</time></td>
+</tr>
+<tr>
+<td>Tue 4/9</td>
+<td></td>
+<td></td>
+<td>Lab 11: Iterators and Generators<br/><time class="label label-primary" datetime=2024-04-16T00:00:00>due Tue 4/16</time></td>
+<td>Homework 10<br/><time class="label label-primary" datetime=2024-04-18T00:00:00>due Thu 4/18</time></td>
+</tr>
+<tr>
+<td>Wed 4/10</td>
+<td>22: Iterators and Generators</td>
+<td><a href="https://www.composingprograms.com/pages/42-implicit-sequences.html#" class="label label-outline", target="_blank">4.2</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum even">14</td>
+<td>Mon 4/15</td>
+<td>23: More Iterators and Generators</td>
+<td><a href="https://www.composingprograms.com/pages/42-implicit-sequences.html#" class="label label-outline", target="_blank">4.2</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 4/16</td>
+<td></td>
+<td></td>
+<td>Lab 12: SQL<br/><time class="label label-primary" datetime=2024-04-23T00:00:00>due Tue 4/23</time></td>
+<td>Homework 11<br/><time class="label label-primary" datetime=2024-04-25T00:00:00>due Thu 4/25</time></td>
+</tr>
+<tr>
+<td>Wed 4/17</td>
+<td>24: Databases and SQL</td>
+<td><a href="https://www.composingprograms.com/pages/43-declarative-programming.html#" class="label label-outline", target="_blank">4.3</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3" class="weeknum odd">15</td>
+<td>Mon 4/22</td>
+<td>25: SQL</td>
+<td><a href="https://www.composingprograms.com/pages/43-declarative-programming.html#" class="label label-outline", target="_blank">4.3</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue 4/23</td>
+<td></td>
+<td></td>
+<td>Lab 13: Practice: Final Review<br/><time class="label label-primary" datetime=2024-04-30T00:00:00>due Tue 4/30</time></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed 4/24</td>
+<td>26: Review and Wrap Up</td>
+<td></td>
+<td></td>
+<td>Ants<br/><time class="label label-primary" datetime=2024-04-24T00:00:00>due Wed 4/24</time></td>
+</tr>
+<tr>
+<td rowspan="2" class="weeknum even">16</td>
+<td>Mon 4/29</td>
+<td>No Lecture: RRR Week</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed 5/1</td>
+<td>No Lecture: RRR Week</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="1" class="weeknum odd">17</td>
+<td>Tue 5/7</td>
+<td>Final Exam 11:30 AM - 2:30 PM</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+  </div>
+</section>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/sp24/assets/js/bootstrap.min.js"></script>
+    <!-- TODO: Move to specific pages... -->
+    <script src="/sp24/assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Resource search
+  var options = {
+    valueNames: ['resource-name', 'resource-type', 'resource-tags']
+  };
+  var resourceList = new List('resources', options);
+
+  // Piazza search
+  // var client = $.algolia.Client('LHANIWJEIC', '968c2f288acce3b95639b2af4ff66250');
+  // var index = client.initIndex('CS61A Fa15 Piazza'); // Change this depending on semester
+  var piazzaResultLimit = 5;
+  var piazzaCache = {};
+
+  function piazzaSearchCallback(err, content) {
+    if (err || content.hits.length === 0) {
+      return;
+    }
+    // Scan all hits and display them
+    for (var i = 0; i < Math.min(content.hits.length, piazzaResultLimit); ++i) {
+
+      var hit = content.hits[i];
+      if (hit.qid in piazzaCache) {
+        piazzaCache[hit.qid].show();
+        continue;
+      }
+
+
+      newPost = resourceList.add({
+          'resource-name': '<a href="' + hit.urlto + '">'
+                           + '@' + hit.qid.toString() + ': ' + hit.subject
+                           + '</a>',
+          'resource-type': 'Piazza post',
+          'resource-tags': hit.tags.join(', ')
+        });
+      newPost[0].show();
+      piazzaCache[hit.qid] = newPost[0];
+
+
+    }
+  }
+
+  function urlExists(url, callback) {
+      // adapted from http://stackoverflow.com/a/1591653
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+          xhr.readyState === 4 && callback(xhr.status < 400);
+      };
+      xhr.open('HEAD', url);
+      xhr.send();
+  }
+
+  // Assignment quick list
+  var assignments = [{"due": "1/23/24", "link": "lab/lab00/", "name": "Lab 0: Community and Setup", "release": "1/17/24"}, {"due": "1/30/24", "link": "lab/lab01/", "name": "Lab 1: Control and Functions", "release": "1/23/24"}, {"due": "2/6/24", "link": "lab/lab02/", "name": "Lab 2: Lists, List Comprehension and Iteration", "release": "1/30/24"}, {"due": "2/13/24", "link": "lab/lab03/", "name": "Lab 3: Environments and Higher Order Functions", "release": "2/6/24"}, {"due": "2/20/24", "link": "lab/lab04/", "name": "Lab 4: Lambdas and Dictionaries", "release": "2/13/24"}, {"due": "2/27/24", "link": "lab/lab05/", "name": "Lab 5: ADTs", "release": "2/20/24"}, {"due": "3/5/24", "link": "lab/lab06/", "name": "Lab 6: Recursion", "release": "2/27/24"}, {"due": "3/12/24", "link": "lab/lab07/", "name": "Lab 7: OOP", "release": "3/5/24"}, {"due": "3/19/24", "link": "lab/lab08/", "name": "Lab 8: Inheritance + Linked Lists", "release": "3/12/24"}, {"due": "3/26/24", "link": "lab/lab09/", "name": "Lab 9: TBD", "release": "3/19/24"}, {"due": "4/9/24", "link": "lab/lab10/", "name": "Lab 10: Trees + Exceptions", "release": "4/2/24"}, {"due": "4/16/24", "link": "lab/lab11/", "name": "Lab 11: Iterators and Generators", "release": "4/9/24"}, {"due": "4/23/24", "link": "lab/lab12/", "name": "Lab 12: SQL", "release": "4/16/24"}, {"due": "4/30/24", "link": "lab/lab13/", "name": "Lab 13: Practice: Final Review", "release": "4/23/24"}, {"due": "2/1/24", "link": "hw/hw01/", "name": "Homework 1", "release": "1/23/24"}, {"due": "2/8/24", "link": "hw/hw02/", "name": "Homework 2", "release": "1/30/24"}, {"due": "2/15/24", "link": "hw/hw03/", "name": "Homework 3", "release": "2/6/24"}, {"due": "2/22/24", "link": "hw/hw04/", "name": "Homework 4", "release": "2/13/24"}, {"due": "2/29/24", "link": "hw/hw05/", "name": "Homework 5", "release": "2/20/24"}, {"due": "3/7/24", "link": "hw/hw06/", "name": "Homework 6", "release": "2/27/24"}, {"due": "3/14/24", "link": "hw/hw07/", "name": "Homework 7", "release": "3/5/24"}, {"due": "3/28/24", "link": "hw/hw08/", "name": "Homework 8", "release": "3/19/24"}, {"due": "4/11/24", "link": "hw/hw09/", "name": "Homework 9", "release": "4/2/24"}, {"due": "4/18/24", "link": "hw/hw10/", "name": "Homework 10", "release": "4/9/24"}, {"due": "4/25/24", "link": "hw/hw11/", "name": "Homework 11", "release": "4/16/24"}, {"due": "3/8/24", "link": "proj/maps/", "name": "Maps", "release": "2/20/24"}, {"due": "2/28/24", "link": "proj/maps/", "name": "Maps Checkpoint", "release": "2/28/24"}, {"due": "3/8/24", "link": "proj/maps/", "name": "Maps", "release": "3/8/24"}, {"due": "4/17/24", "link": "proj/ants/", "name": "Ants Checkpoint", "release": "4/8/24"}, {"due": "4/24/24", "link": "proj/ants/", "name": "Ants", "release": "4/8/24"}, {"due": "4/24/24", "link": "proj/ants/", "name": "Ants", "release": "4/24/24"}];
+
+  $(document).ready(function() {
+    $("#resources-search-box").keyup(function() {
+      if (!this.value) {
+        $('#resources-display').hide();
+      } else {
+        index.search($("#resources-search-box").val(), piazzaSearchCallback);
+        $('#resources-display').show();
+      }
+    });
+
+    var currentTime = Date.now();
+    var quickListCount = 0;
+    assignments.forEach(function(assignment) {
+      var due = new Date(assignment.due);
+      due.setDate(due.getDate() + 1);
+      if (currentTime <= due) {
+        urlExists(assignment.link, function(exists) {
+          if (!exists) return;
+        if (quickListCount % 4 === 0) {
+          $('#assignment-quick-list').append('<div class="row"></div>');
+          quickListCount++;
+        }
+        $('#assignment-quick-list > div').last().append(
+            `<div class="col-xs-6 col-md-3">
+              <div class="quick-list-item">
+                <a href="${assignment.link}">
+                  <span class="quick-list-item-link"></span>
+                  ${assignment.name}
+                </a>
+                <hr/>Due ${assignment.due}
+              </div></div>`);
+        });
+      }
+    });
+  });
+
+  // Announcements
+  var announcementIndex = 0;
+
+  function setAnnouncements(offset) {
+    var newIndex = announcementIndex  + offset;
+    var announcementNumber = $('.announcement').length;
+
+    if (newIndex < 0 || newIndex >= announcementNumber) {
+      return;
+    }
+
+    $('#announcement-' + announcementIndex).hide(0, function() {
+      $('#announcement-' + newIndex).show(0);
+    });
+
+    announcementIndex = newIndex;
+
+    if (announcementIndex >= announcementNumber - 1) {
+      $('#announcement-' + announcementIndex + ' .announcement-btn-older')
+        .addClass('disabled');
+    }
+    if (announcementIndex === 0) {
+      $('#announcement-' + announcementIndex + ' .announcement-btn-newer')
+        .addClass('disabled');
+    }
+  }
+  setAnnouncements(0);
+
+  $('.announcement-btn-newer > a').click(function() {
+    setAnnouncements(-1);
+  });
+  $('.announcement-btn-older > a').click(function() {
+    setAnnouncements(1);
+  });
+});
+</script>
+  </body>
+</html>

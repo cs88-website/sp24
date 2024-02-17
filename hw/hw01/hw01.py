@@ -104,7 +104,12 @@ def hailstone(n):
     """Print the hailstone sequence starting at n and return its
     length.
 
-    >>> a = hailstone(10)
+    >>> a = hailstone(2)
+    2
+    1
+    >>> a
+    2
+    >>> b = hailstone(10)
     10
     5
     16
@@ -112,7 +117,7 @@ def hailstone(n):
     4
     2
     1
-    >>> a
+    >>> b
     7
     """
     "*** YOUR CODE HERE ***"
