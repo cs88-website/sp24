@@ -147,7 +147,7 @@ have a program called Terminal on your computer.</p>
 <h3 id="install-python-3">Install Python 3</h3>
 
 
-<p>Python 3 is our primary programming language. Download the latest version of Python for your operating system (Mac, Windows, Linux) <a href="https://www.python.org/downloads/">here</a>. Then follow the instructions for your specific operating system below.</p>
+<p>Python 3 is our primary programming language. Download the latest version of Python for your operating system (Mac, Windows, Linux) <a href="https://www.python.org/downloads/">here</a>. Note: Python 3.10+ is recommended for this class. Then follow the instructions for your specific operating system below.</p>
 
 <blockquote><p>There are 2 major versions of Python in use today: Python 2 and Python 3. In this class, and in most modern applications, we use Python 3 (so when we say "Python" in this class, we really mean "Python 3"). Python 3 is not backwards compatible with Python 2. However, some legacy applications may still use Python 2, which has slightly different syntax and functionality. For example, Python 2 comes preinstalled on Mac, but we want to install Python 3.</p></blockquote>
 
@@ -306,7 +306,11 @@ mkdir projects</code></pre>
   <li>Open VS Code</li>
   <li>At the top menu bar, go to File > Open and click on the <code>c88c</code> directory you just created.</li>
   <li>At the top menu bar, go to Terminal > New Terminal. It should open a mini terminal window inside your VS Code window. <strong>Note:</strong> For Windows, ensure that the terminal opened is Git Bash (Windows has multiple types of terminals). See <a href="https://code.visualstudio.com/docs/terminal/basics#_terminal-shells">this article</a> for how to select Git Bash. You can also configure your terminal settings so that every time you create a new terminal in VS Code, it defaults to opening a Git Bash shell.</li>
+  <li><strong>Turn on auto-save</strong> in your text editor so that your changes are automatically saved to the file.
+  In VS Code, you can do this by going to <code>File</code> > <code>Auto Save</code> as shown in the image below.</li>
 </ol>
+
+<p><img class="img-responsive center-block" src="assets/autosave_vscode.png" alt="autosave_vscode"></p>
 
 <blockquote><p>When you open an integrated terminal, your text editor will automatically move you into the directory that you opened in step 2. In this case, it would be something like <code>~/Desktop/c88c</code>. You can always verify this by running <code>pwd</code> in the terminal to make sure the path that is displayed is the one you expect.</p></blockquote>
 
@@ -331,7 +335,11 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 &gt;&gt;&gt; </code></pre>
 
 <p>This is where you can type in Python code. Try typing some expressions you saw in lecture, or just play around to see
-what happens! You can type <code>exit()</code> or <code>Ctrl + D</code> to return to your command line.</p>
+what happens!</p>
+
+<p>You can type <code>exit()</code> or <code>Ctrl + D</code> to return to your command line. If you're on a Mac, it looks something like this:</p>
+
+<p><img class="img-responsive center-block" src="assets/interpreter_exit.png" alt="Exiting the python interpreter"></p>
 
 <blockquote><p>Windows troubleshooting:</p>
 
@@ -474,6 +482,11 @@ complicated &mdash; it will get much easier over time. Just keep practicing!</p>
 all you have to do is fill in the parts that are incomplete.</p>
 
 <p>Open <code>lab00.py</code> in your text editor of choice (this will be Visual Studio Code, Vim, etc.).</p>
+
+<p><strong>Turn on auto-save</strong> in your text editor so that your changes are automatically saved to the file.
+In VS Code, you can do this by going to <code>File</code> > <code>Auto Save</code> as shown in the image below.</p>
+
+<p><img class="img-responsive center-block" src="assets/autosave_vscode.png" alt="autosave_vscode"></p>
 
 <p>In our productive workflow, we suggest having your text editor and terminal open at the same time.</p>
 
@@ -741,6 +754,12 @@ If you want to learn more about other Python flags, take a look at the
 </ul>
 
 
+<h3 id="python-tutor">Python Tutor</h3>
+
+
+<p><a href="https://pythontutor.com/composingprograms.html#mode=edit">Python Tutor</a> is a website that allows you to write Python code in your web browser and see it visualized step by step. This is a super useful tool that can help you understand exactly what your code is doing and also keeps track of what variables’ values are along the way. If you ever have trouble understanding what your code is doing, or finding a bug, pull up python tutor and step through it!</p>
+
+
 <h3 id="optional-text-editor-guides">(Optional) Text Editor Guides</h3>
 
 
@@ -825,6 +844,7 @@ editors. After you're done with lab, you can take a look if you're interested:</
   <li><a href="#appendix">Appendix</a></li>
   <ul>
   <li><a href="#useful-python-command-line-options">Useful Python command line options</a></li>
+  <li><a href="#python-tutor">Python Tutor</a></li>
   <li><a href="#optional-text-editor-guides">(Optional) Text Editor Guides</a></li>
 </ul>
 

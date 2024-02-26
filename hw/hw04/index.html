@@ -176,11 +176,15 @@ means.</p>
 <pre><code>def lambda_curry2(f2):
     &quot;&quot;&quot;
     Returns a Curried version of a two argument function func.
-    &gt;&gt;&gt; from operator import add
+    &gt;&gt;&gt; from operator import add, mul
     &gt;&gt;&gt; x = lambda_curry2(add)
     &gt;&gt;&gt; y = x(3)
     &gt;&gt;&gt; y(5)
     8
+    &gt;&gt;&gt; a = lambda_curry2(mul)
+    &gt;&gt;&gt; b = a(3)
+    &gt;&gt;&gt; b(5)
+    15
     &quot;&quot;&quot;
     "*** YOUR CODE HERE ***"
     </code></pre>

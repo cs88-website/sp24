@@ -400,11 +400,8 @@ operator, use a <code>lambda</code> function to return <code>&quot;Remember to o
 
     &gt;&gt;&gt; TAs = {&quot;12pm&#x2d;2pm&quot;: &quot;sean&quot;, &quot;4pm&#x2d;6pm&quot;: &quot;rebecca&quot;, &quot;2pm&#x2d;4pm&quot;: &quot;lily&quot;}
     &gt;&gt;&gt; flipped_TAs = flip_dict(TAs)
-    &gt;&gt;&gt; sorted_keys = sorted(flipped_TAs)
-    &gt;&gt;&gt; sorted_keys
-    [&#x27;lily&#x27;, &#x27;rebecca&#x27;, &#x27;sean&#x27;]
-    &gt;&gt;&gt; [flipped_TAs[i] for i in sorted_keys]
-    [&#x27;2pm&#x2d;4pm&#x27;, &#x27;4pm&#x2d;6pm&#x27;, &#x27;12pm&#x2d;2pm&#x27;]
+    &gt;&gt;&gt; flipped_TAs 
+    {&#x27;sean&#x27;: &#x27;12pm&#x2d;2pm&#x27;, &#x27;rebecca&#x27;: &#x27;4pm&#x2d;6pm&#x27;, &#x27;lily&#x27;: &#x27;2pm&#x2d;4pm&#x27;}
     &quot;&quot;&quot;
 <div class="alt 3">    "*** YOUR CODE HERE ***"
     

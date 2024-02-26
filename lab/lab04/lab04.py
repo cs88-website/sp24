@@ -53,11 +53,8 @@ def flip_dict(dictionary):
 
     >>> TAs = {"12pm-2pm": "sean", "4pm-6pm": "rebecca", "2pm-4pm": "lily"}
     >>> flipped_TAs = flip_dict(TAs)
-    >>> sorted_keys = sorted(flipped_TAs)
-    >>> sorted_keys
-    ['lily', 'rebecca', 'sean']
-    >>> [flipped_TAs[i] for i in sorted_keys]
-    ['2pm-4pm', '4pm-6pm', '12pm-2pm']
+    >>> flipped_TAs 
+    {'sean': '12pm-2pm', 'rebecca': '4pm-6pm', 'lily': '2pm-4pm'}
     """
     "*** YOUR CODE HERE ***"
     

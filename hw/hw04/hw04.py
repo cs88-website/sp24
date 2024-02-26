@@ -58,11 +58,15 @@ def higher_order_lambdas():
 def lambda_curry2(f2):
     """
     Returns a Curried version of a two argument function func.
-    >>> from operator import add
+    >>> from operator import add, mul
     >>> x = lambda_curry2(add)
     >>> y = x(3)
     >>> y(5)
     8
+    >>> a = lambda_curry2(mul)
+    >>> b = a(3)
+    >>> b(5)
+    15
     """
     "*** YOUR CODE HERE ***"
     
