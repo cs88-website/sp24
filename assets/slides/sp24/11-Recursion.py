@@ -15,8 +15,9 @@ def countdown(n):
         print('Blastoff!')
     else:
         # What happens if we swap the order?
-        print(n)
         countdown(n - 1)
+        print(n)
+
 
 # countdown(2)
     # countdown(1)
@@ -91,7 +92,7 @@ def min_r(s):
         return min(first(s), min_r(rest(s)))
 
 def palindrome(word):
-  if len(word) == 1:
+  if len(word) <= 1:
     return True
   elif word[0] == word[-1]:
     return palindrome(word[1:-1])
