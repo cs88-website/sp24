@@ -7,12 +7,10 @@ def fib(n):
         return n
     return fib(n - 1) + fib(n - 2)
 
-
 # if n < 2:
 #     return n
 # else:
 #     return fib(n - 1) + fib(n - 2)
-
 
 def iter_fib(n):
     """
@@ -49,22 +47,14 @@ def count_change(value, coins):
     not_using_coin = count_change(value, coins[1:])
     return using_coin + not_using_coin
 
-### Pascal's Triangle
-def generate_pascal_triangle(n):
-    if n == 1:
-        return [[1]]
-    else:
-        prev_triangle = generate_pascal_triangle(n - 1)
-        last_row = prev_triangle[-1]
-        new_row = [1]
 
-        for i in range(len(last_row) - 1):
-            new_row.append(last_row[i] + last_row[i + 1])
-
-        new_row.append(1)
-        prev_triangle.append(new_row)
-
-        return prev_triangle
+# if value < 0 or len(coins) == 0:
+#     return 0
+# elif value == 0:
+#     return 1
+# using_coin = count_change(value - coins[0], coins)
+# not_using_coin = count_change(value, coins[1:])
+# return using_coin + not_using_coin
 
 # ############## OPTIONAL CONTENT BELOW THIS LINE ###########
 
@@ -93,11 +83,11 @@ def quicksort(lst):
 ### but conveys the idea of trees.
 ### ignore all the stuff about dealing with filepaths...
 
-import os
+import os, math
 def is_file(directory, file_name):
     return os.path.isfile(os.path.join(directory, file_name))
 
-def walk_directory(directory, indent=''):
+def walk_directory(directory, indent='', max_depth=math.inf):
     """
     This function just prints ALL files and folders, and goes through all subfolders.
     e.g. walk_directory('/Users/Michael/Desktop')
@@ -108,4 +98,7 @@ def walk_directory(directory, indent=''):
             print(f'{indent}FILE: {item}')
         else:
             print(f'{indent}DIRECTORY: {item}')
-            walk_directory(os.path.join(directory, item), indent + '\t')
+            if max_depth > 0:
+                walk_directory(os.path.join(directory, item), indent + '\t', max_depth -1)
+            else:
+                print(f'{indent}\t...max depth reached.')
