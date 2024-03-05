@@ -1,0 +1,29 @@
+{
+    "name": "Lab 7",
+    "endpoint": "cal/cs88/sp24/lab07",
+    "src": [
+        "lab07.py"
+    ],
+    "tests": {
+        "tests/car.py": "ok_test",
+        "lab07.py:Beater.energy": "doctest",
+        "lab07.py:Chaser.energy": "doctest",
+        "lab07.py:Seeker.energy": "doctest",
+        "lab07.py:Keeper.energy": "doctest"
+    },
+    "default_tests": [
+        "Beater.energy",
+        "Chaser.energy",
+        "Seeker.energy",
+        "Keeper.energy"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup",
+        "scoring"
+    ]
+}
