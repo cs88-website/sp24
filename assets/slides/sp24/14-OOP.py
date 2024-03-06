@@ -1,9 +1,9 @@
 class Test:
     def __init__(self, value):
-        self.__value = value
+        self.value = value
 
     def show_value(self):
-        return self.__value
+        return self.value
 
 # Our Point ADT
 def point(x, y): # our point ADT
@@ -48,26 +48,55 @@ type(my_house)
 
 class BaseAccount:
     def __init__(self, name, initial_deposit=0):
-        self.__name = name
-        self.__balance = initial_deposit
+        self.name = name
+        self.balance = initial_deposit
 
     def account_name(self):
-        return self.__name
+        return self.name
 
     def balance(self):
-        return self.__balance
+        return self.balance
 
     def withdraw(self, amount):
-        self.__balance -= amount
-        return self.__balance
+        self.balance -= amount
+        return self.balance
 
     def deposit(self, amount):
-        self.__balance += amount
-        return self.__balance
+        self.balance += amount
+        return self.balance
 
+    # We don't cover this synatx, but this is a common python tool to describe data that doesn't change.
     # @property
     # def name(self):
-    #     return self._name
+    #     return self.name
+
+## BaseAccount with private attributes. This prevents them from being accessed outside of the class.
+# class BaseAccount:
+#     def __init__(self, name, initial_deposit=0):
+#         self.__name = name
+#         self.__balance = initial_deposit
+
+#     def account_name(self):
+#         return self.__name
+
+#     def balance(self):
+#         return self.__balance
+
+#     def withdraw(self, amount):
+#         self.__balance -= amount
+#         return self.__balance
+
+#     def deposit(self, amount):
+#         self.__balance += amount
+#         return self.__balance
+
+#    # This allows us to write account.name as an attribute
+#    # we don't cover @property in 88C, but it may be useful
+#    @property
+#    def name(self):
+#        return self.__name
+
+
 
 # Make a new account
 my_account = BaseAccount('CS88', 100)
@@ -86,6 +115,7 @@ data8.withdraw(25)
 #data8.balance()
 cs88.balance()
 
+# This account uses _ as a convention for internal data.
 class BaseAccount2:
     account_number_seed = 1000
     accounts_list = []
