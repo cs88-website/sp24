@@ -23,12 +23,14 @@ type(origin)
 
 ##### The Point type
 class Point:
+    class PointError(Exception):
+        pass
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
-    def subtract(self, other):
-        return Point(self.x - other.x, self.y - other.y)
+    subtract = lambda self, other: Point(self.x - other.x, self.y - other.y)
 
     def __sub__(self, other):
         """Allows us to write point3 = point1 - point2"""

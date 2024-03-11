@@ -36,7 +36,7 @@ class BaseAccount:
     - decreased by account_withdrawl
     """
     # Class attributes outside and class defs
-    # These are "fake" private.
+    # These are "intended" private.
     _account_number_seed = 1000
     bank_name = 'Berkeley'
     _all_accounts = []
