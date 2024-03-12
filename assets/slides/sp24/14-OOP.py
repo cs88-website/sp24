@@ -1,9 +1,9 @@
 class Test:
     def __init__(self, value):
-        self.value = value
+        self.__value = value
 
     def show_value(self):
-        return self.value
+        return self.__value
 
 # Our Point ADT
 def point(x, y): # our point ADT
