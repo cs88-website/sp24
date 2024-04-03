@@ -236,13 +236,14 @@ following constructor and selectors:</p>
 <p>It may be easier to visualize this translation by formatting the code
 like this:</p>
 
-<pre><code>t = Tree(1,
-         [Tree(2),
-          Tree(3,
-               [Tree(4),
-                Tree(5)]),
-          Tree(6,
-               [Tree(7)])])</code></pre>
+<pre><code>t = Tree(
+    1,
+    [
+        Tree(2),
+        Tree(3, [Tree(4), Tree(5)] ),
+        Tree(6, [Tree(7)] )
+    ]
+)</code></pre>
 
 <p>To extract the number <code>3</code> from this tree, which is the value of the root of
 its second branch, we would do this:</p>
