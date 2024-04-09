@@ -408,6 +408,21 @@ should slice the <code>link</code> starting at <code>start</code> and ending one
   });
 </script>
 <!-- <script src="//code.jquery.com/jquery-latest.js"></script> -->
-<!--  -->
+<!-- <script>
+  $(function() {
+    if (new Date("4/9/2024") < new Date()) {
+      $('.toggleButton').css('display', 'inline-block');
+      $('.toggleButton').click(function() {
+        var solution_id = $(this).attr('id');
+        $('div.' + solution_id).slideToggle(600);
+      });
+    }
+    // Always display these toggle buttons
+    $('.toggleButtonShow').click(function() {
+      var solution_id = $(this).attr('id');
+      $('div.' + solution_id).slideToggle(600);
+    });
+  });
+</script> -->
   </body>
 </html>
