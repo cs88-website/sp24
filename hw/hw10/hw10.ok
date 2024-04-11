@@ -9,6 +9,7 @@
         "hw10.py:IteratorRestart": "doctest",
         "hw10.py:hailstone": "doctest",
         "hw10.py:pairs": "doctest",
+        "hw10.py:PairsIterator": "doctest",
         "hw10.py:merge": "doctest"
     },
     "default_tests": [
@@ -16,6 +17,7 @@
         "IteratorRestart",
         "hailstone",
         "pairs",
+        "PairsIterator",
         "merge"
     ],    
     "protocols": [
