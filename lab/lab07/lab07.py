@@ -52,90 +52,99 @@ class Car(object):
 # Quidditch
 
 class QuidditchPlayer:
-    def __init__(self, name, base_energy):
+    def __init__(self, name, energy):
         """
-        QuidditchPlayers have a name, and begin with base_energy.
+        QuidditchPlayers have a name and begin with some amount of energy.
         """
         self.name = name
-        self.base_energy = base_energy
+        self.energy = energy
 
-    def energy(self):
-        return self.base_energy
 
 class Beater(QuidditchPlayer):
-    role = "bludgers"
 
-    def energy(self, time):
+    def play(self, time):
         """
-        Returns the amount of energy left after playing for time minutes. 
-        After playing for time minutes, Beaters lose their base energy level 
-        divided by the number of minutes. If time is 0, catch the ZeroDivisionError 
-        and print "You can't divide by zero!" instead.
         >>> fred = Beater("Fred Weasley", 640)
-        >>> fred.energy(40)
+        >>> fred.play(0)
+        "You can't divide by zero!"
+        >>> fred.play(40)
+        'Fred Weasley played for 40 minutes'
+        >>> fred.energy  # Fred lost 640 / 40 energy points
         624.0
-        >>> fred.energy(0)
-        You can't divide by zero!
+        >>> fred.play(10)
+        'Fred Weasley played for 10 minutes'
+        >>> fred.energy  # Fred lost 624 / 10 energy points
+        561.6
         """
         "*** YOUR CODE HERE ***"
         
+
 
 class Chaser(QuidditchPlayer):
-    role = "score"
     energy_expended = 20
     
-    def __init__(self, name, base_energy, goals):
+    def __init__(self, name, energy, goals):
         """
-        Chasers have a name, score goals, and begin with base_energy.
+        Chasers have a name, starting energy, and number of goals scored.
         """
         "*** YOUR CODE HERE ***"
         
 
-    def energy(self, time):
+    def play(self, time):
         """
-        Returns the amount of energy left after playing for time minutes. For every goal 
-        they score, they use energy_expended units of energy. In addition, they also use 
-        10% of energy_expended if the number of minutes they have played is a multiple of 9.
         >>> katie = Chaser("Katie Bell", 230, 2)
-        >>> katie.energy(20)
+        >>> katie.play(20)
+        'Katie Bell played for 20 minutes'
+        >>> katie.energy
         190
+        >>> katie.play(10)
+        'Katie Bell played for 10 minutes'
+        >>> katie.energy
+        150
         >>> ginny = Chaser("Ginny Weasley", 400, 3)
-        >>> ginny.energy(45)
+        >>> ginny.play(45)
+        'Ginny Weasley played for 45 minutes'
+        >>> ginny.energy
         338.0
         """
         "*** YOUR CODE HERE ***"
         
 
+
 class Seeker(QuidditchPlayer):
-    role = "snitch"
     energy_expended = 5
 
-    def energy(self, time):
+    def play(self, time):
         """
-        Returns the amount of energy after time minutes. Seekers expend energy_expended 
-        units of their energy for every minute they have been playing.
         >>> harry = Seeker("Harry Potter", 700)
-        >>> harry.energy(30)
+        >>> harry.play(30)
+        'Harry Potter played for 30 minutes'
+        >>> harry.energy
         550
+        >>> harry.play(10)
+        'Harry Potter played for 10 minutes'
+        >>> harry.energy
+        500
         """
         "*** YOUR CODE HERE ***"
         
 
+
 class Keeper(QuidditchPlayer):
-    role = "guard"
     energy_expended = 50
 
-    def energy(self, time):
+    def play(self, time):
         """
-        Returns the amount of energy after time minutes. If less than 30 minutes have 
-        passed, then Keepers do not lose any energy. If 30 minutes or more have passed, 
-        then Keepers expend 80% of their energy_expended units for every full 15 
-        minutes that pass.
         >>> oliver = Keeper("Oliver Wood", 380)
-        >>> oliver.energy(45)
+        >>> oliver.play(45)
+        'Oliver Wood played for 45 minutes'
+        >>> oliver.energy
+        260.0
+        >>> oliver.play(10)
+        'Oliver Wood played for 10 minutes'
+        >>> oliver.energy
         260.0
         """
         "*** YOUR CODE HERE ***"
         
-
 

@@ -196,47 +196,96 @@ questions:</p>
 
 <h3 class="question" id="q2">Question 2: Quidditch</h3>
 
-<p>It's time for the opening quidditch match of the season! We represent the various positions for players with the <code>QuidditchPlayer</code> class and its subclasses. Every player begins with a <code>base_energy</code> level, but every position requires a different proportion of energy. Fill in the <code>energy</code> method for the <code>Beater</code>, <code>Chaser</code>, <code>Seeker</code>, and <code>Keeper</code> classes, according to their docstrings. In addition, fill in the <code>__init__</code> method for the <code>Chaser</code> class.</p>
+<p>Quidditch is a sport from the Harry Potter series, played on flying broomsticks. In the game there are different roles and your job is to complete the classes for the given roles. We represent the various positions for players with the <code>QuidditchPlayer</code> class and its subclasses.</p>
 
-<div class="solution 1">
-
-<pre><code>class Player:
-    def __init__(self, name, base_energy):
+<pre><code>class QuidditchPlayer:
+    def __init__(self, name, energy):
         &quot;&quot;&quot;
-        Players have a name, and begin with base_energy.
+        QuidditchPlayers have a name and begin with some amount of energy.
         &quot;&quot;&quot;
         self.name = name
-        self.base_energy = base_energy
+        self.energy = energy</code></pre>
 
-    def energy(self):
-        return self.base_energy</code></pre>
 
-</div>
+<h4 id="beater">Beater</h4>
+
+
+<p>Implement the <code>play</code> method of the <code>Beater</code> class. After playing for <code>time</code> minutes, Beaters lose N energy, where N is their current energy divided by the number of minutes.</p>
+
+<p>If <code>time</code> is 0, return <code>&quot;You can&#x27;t divide by zero!&quot;</code>. Otherwise, return <code>&quot;{name} played for {time} minutes&quot;</code>. You may assume the energy level will never become negative.</p>
+
+
+
+<pre><code>class Beater(QuidditchPlayer):
+
+    def play(self, time):
+        &quot;&quot;&quot;
+        &gt;&gt;&gt; fred = Beater(&quot;Fred Weasley&quot;, 640)
+        &gt;&gt;&gt; fred.play(0)
+        &quot;You can&#x27;t divide by zero!&quot;
+        &gt;&gt;&gt; fred.play(40)
+        &#x27;Fred Weasley played for 40 minutes&#x27;
+        &gt;&gt;&gt; fred.energy  # Fred lost 640 / 40 energy points
+        624.0
+        &gt;&gt;&gt; fred.play(10)
+        &#x27;Fred Weasley played for 10 minutes&#x27;
+        &gt;&gt;&gt; fred.energy  # Fred lost 624 / 10 energy points
+        561.6
+        &quot;&quot;&quot;
+<div class="alt 1">        "*** YOUR CODE HERE ***"
+        
+</div><div class="solution 1">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x69;&#x66;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x3d;&#x3d;&#x20;&#x30;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x22;&#x59;&#x6f;&#x75;&#x20;&#x63;&#x61;&#x6e;&#x27;&#x74;&#x20;&#x64;&#x69;&#x76;&#x69;&#x64;&#x65;&#x20;&#x62;&#x79;&#x20;&#x7a;&#x65;&#x72;&#x6f;&#x21;&#x22;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x65;&#x6c;&#x73;&#x65;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x3d;&#x20;&#x28;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2f;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x66;&#x22;&#x7b;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x6e;&#x61;&#x6d;&#x65;&#x7d;&#x20;&#x70;&#x6c;&#x61;&#x79;&#x65;&#x64;&#x20;&#x66;&#x6f;&#x72;&#x20;&#x7b;&#x74;&#x69;&#x6d;&#x65;&#x7d;&#x20;&#x6d;&#x69;&#x6e;&#x75;&#x74;&#x65;&#x73;&#x22;</div></code></pre>
+
+
     <button id='1' class='toggleButton'>
     Toggle Solution<noscript> (enable JavaScript)</noscript>
     </button>
     
 
+<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Beater.play</code></pre>
 
 
-<pre><code>class Beater(QuidditchPlayer):
-    role = &quot;bludgers&quot;
+<h4 id="chaser">Chaser</h4>
 
-    def energy(self, time):
+
+<p>Implement the <code>__init__</code> and <code>play</code> methods of <code>Chaser</code>. Notice that <code>Chaser</code>s have an additional instance attribute <code>goals</code> which stores the number of goals they've scored.</p>
+
+<p>For every goal scored, Chasers use <code>energy_expended</code> units of energy. An additional 10% of <code>energy_expended</code> is lost if the number of minutes played is a multiple of 9.</p>
+
+<p>The <code>play</code> method always returns <code>&quot;{name} played for {time} minutes&quot;</code>. You may assume the energy level will never become negative.</p>
+
+
+
+<pre><code>class Chaser(QuidditchPlayer):
+    energy_expended = 20
+
+    def __init__(self, name, energy, goals):
         &quot;&quot;&quot;
-        Returns the amount of energy left after playing for time minutes. 
-        After playing for time minutes, Beaters lose their base energy level 
-        divided by the number of minutes. If time is 0, catch the ZeroDivisionError 
-        and print &quot;You can&#x27;t divide by zero!&quot; instead.
-        &gt;&gt;&gt; fred = Beater(&quot;Fred Weasley&quot;, 640)
-        &gt;&gt;&gt; fred.energy(40)
-        624.0
-        &gt;&gt;&gt; fred.energy(0)
-        You can&#x27;t divide by zero!
+        Chasers have a name, starting energy, and number of goals scored.
         &quot;&quot;&quot;
 <div class="alt 2">        "*** YOUR CODE HERE ***"
         
-</div><div class="solution 2">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x74;&#x72;&#x79;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x73;&#x65;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x20;&#x28;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x73;&#x65;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2f;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x65;&#x78;&#x63;&#x65;&#x70;&#x74;&#x20;&#x5a;&#x65;&#x72;&#x6f;&#x44;&#x69;&#x76;&#x69;&#x73;&#x69;&#x6f;&#x6e;&#x45;&#x72;&#x72;&#x6f;&#x72;&#x20;&#x61;&#x73;&#x20;&#x65;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x70;&#x72;&#x69;&#x6e;&#x74;&#x28;&#x22;&#x59;&#x6f;&#x75;&#x20;&#x63;&#x61;&#x6e;&#x27;&#x74;&#x20;&#x64;&#x69;&#x76;&#x69;&#x64;&#x65;&#x20;&#x62;&#x79;&#x20;&#x7a;&#x65;&#x72;&#x6f;&#x21;&#x22;&#x29;</div></code></pre>
+</div><div class="solution 2">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x75;&#x70;&#x65;&#x72;&#x28;&#x29;&#x2e;&#x5f;&#x5f;&#x69;&#x6e;&#x69;&#x74;&#x5f;&#x5f;&#x28;&#x6e;&#x61;&#x6d;&#x65;&#x2c;&#x20;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x67;&#x6f;&#x61;&#x6c;&#x73;&#x20;&#x3d;&#x20;&#x67;&#x6f;&#x61;&#x6c;&#x73;</div>
+    def play(self, time):
+        &quot;&quot;&quot;
+        &gt;&gt;&gt; katie = Chaser(&quot;Katie Bell&quot;, 230, 2)
+        &gt;&gt;&gt; katie.play(20)
+        &#x27;Katie Bell played for 20 minutes&#x27;
+        &gt;&gt;&gt; katie.energy
+        190
+        &gt;&gt;&gt; katie.play(10)
+        &#x27;Katie Bell played for 10 minutes&#x27;
+        &gt;&gt;&gt; katie.energy
+        150
+        &gt;&gt;&gt; ginny = Chaser(&quot;Ginny Weasley&quot;, 400, 3)
+        &gt;&gt;&gt; ginny.play(45)
+        &#x27;Ginny Weasley played for 45 minutes&#x27;
+        &gt;&gt;&gt; ginny.energy
+        338.0
+        &quot;&quot;&quot;
+<div class="alt 2">        "*** YOUR CODE HERE ***"
+        
+</div><div class="solution 2">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x3d;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x67;&#x6f;&#x61;&#x6c;&#x73;&#x20;&#x2a;&#x20;&#x43;&#x68;&#x61;&#x73;&#x65;&#x72;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x69;&#x66;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x25;&#x20;&#x39;&#x20;&#x3d;&#x3d;&#x20;&#x30;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x3d;&#x20;&#x30;&#x2e;&#x31;&#x20;&#x2a;&#x20;&#x43;&#x68;&#x61;&#x73;&#x65;&#x72;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x66;&#x22;&#x7b;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x6e;&#x61;&#x6d;&#x65;&#x7d;&#x20;&#x70;&#x6c;&#x61;&#x79;&#x65;&#x64;&#x20;&#x66;&#x6f;&#x72;&#x20;&#x7b;&#x74;&#x69;&#x6d;&#x65;&#x7d;&#x20;&#x6d;&#x69;&#x6e;&#x75;&#x74;&#x65;&#x73;&#x22;</div></code></pre>
 
 
     <button id='2' class='toggleButton'>
@@ -244,36 +293,36 @@ questions:</p>
     </button>
     
 
-<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Beater.energy</code></pre>
+<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Chaser.play</code></pre>
+
+
+<h4 id="seeker">Seeker</h4>
+
+
+<p>Implement the <code>play</code> method of the <code>Seeker</code> class. <code>Seeker</code>s lose <code>energy_expended</code> units of their energy for every minute they played.</p>
+
+<p>The <code>play</code> method always returns <code>&quot;{name} played for {time} minutes&quot;</code>. You may assume the energy level will never become negative.</p>
 
 
 
-<pre><code>class Chaser(QuidditchPlayer):
-    role = &quot;score&quot;
-    energy_expended = 20
+<pre><code>class Seeker(QuidditchPlayer):
+    energy_expended = 5
 
-    def __init__(self, name, base_energy, goals):
+    def play(self, time):
         &quot;&quot;&quot;
-        Chasers have a name, score goals, and begin with base_energy.
+        &gt;&gt;&gt; harry = Seeker(&quot;Harry Potter&quot;, 700)
+        &gt;&gt;&gt; harry.play(30)
+        &#x27;Harry Potter played for 30 minutes&#x27;
+        &gt;&gt;&gt; harry.energy
+        550
+        &gt;&gt;&gt; harry.play(10)
+        &#x27;Harry Potter played for 10 minutes&#x27;
+        &gt;&gt;&gt; harry.energy
+        500
         &quot;&quot;&quot;
 <div class="alt 3">        "*** YOUR CODE HERE ***"
         
-</div><div class="solution 3">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x75;&#x70;&#x65;&#x72;&#x28;&#x29;&#x2e;&#x5f;&#x5f;&#x69;&#x6e;&#x69;&#x74;&#x5f;&#x5f;&#x28;&#x6e;&#x61;&#x6d;&#x65;&#x2c;&#x20;&#x62;&#x61;&#x73;&#x65;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x67;&#x6f;&#x61;&#x6c;&#x73;&#x20;&#x3d;&#x20;&#x67;&#x6f;&#x61;&#x6c;&#x73;</div>
-    def energy(self, time):
-        &quot;&quot;&quot;
-        Returns the amount of energy left after playing for time minutes. For every goal 
-        they score, they use energy_expended units of energy. In addition, they also use 
-        10% of energy_expended if the number of minutes they have played is a multiple of 9.
-        &gt;&gt;&gt; katie = Chaser(&quot;Katie Bell&quot;, 230, 2)
-        &gt;&gt;&gt; katie.energy(20)
-        190
-        &gt;&gt;&gt; ginny = Chaser(&quot;Ginny Weasley&quot;, 400, 3)
-        &gt;&gt;&gt; ginny.energy(45)
-        338.0
-        &quot;&quot;&quot;
-<div class="alt 3">        "*** YOUR CODE HERE ***"
-        
-</div><div class="solution 3">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x63;&#x75;&#x72;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x3d;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x73;&#x65;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x63;&#x75;&#x72;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x3d;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#x20;&#x2a;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x67;&#x6f;&#x61;&#x6c;&#x73;&#x20;&#x23;&#x20;&#x4e;&#x6f;&#x74;&#x65;&#x3a;&#x20;&#x43;&#x68;&#x61;&#x73;&#x65;&#x72;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#x20;&#x77;&#x6f;&#x72;&#x6b;&#x73;&#x20;&#x74;&#x6f;&#x6f;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x69;&#x66;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x25;&#x20;&#x39;&#x20;&#x3d;&#x3d;&#x20;&#x30;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x63;&#x75;&#x72;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x3d;&#x20;&#x30;&#x2e;&#x31;&#x20;&#x2a;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#x20;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x63;&#x75;&#x72;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;</div></code></pre>
+</div><div class="solution 3">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x3d;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x2a;&#x20;&#x53;&#x65;&#x65;&#x6b;&#x65;&#x72;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x66;&#x22;&#x7b;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x6e;&#x61;&#x6d;&#x65;&#x7d;&#x20;&#x70;&#x6c;&#x61;&#x79;&#x65;&#x64;&#x20;&#x66;&#x6f;&#x72;&#x20;&#x7b;&#x74;&#x69;&#x6d;&#x65;&#x7d;&#x20;&#x6d;&#x69;&#x6e;&#x75;&#x74;&#x65;&#x73;&#x22;</div></code></pre>
 
 
     <button id='3' class='toggleButton'>
@@ -281,27 +330,38 @@ questions:</p>
     </button>
     
 
-<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Chaser.energy</code></pre>
+<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Seeker.play</code></pre>
+
+
+<h4 id="keeper">Keeper</h4>
+
+
+<p>Implement the <code>play</code> method of the <code>Keeper</code> class. If a <code>Keeper</code> has played for 30 minutes or more, they lose 80% of their <code>energy_expended</code> for every full 15 minutes that were played. Otherwise, they do not lose any energy.</p>
+
+<p>The amount of time a <code>Keeper</code> has played resets after each call to the <code>play</code> method.</p>
+
+<p>The <code>play</code> method always returns <code>&quot;{name} played for {time} minutes&quot;</code>. You may assume the energy level will never become negative.</p>
 
 
 
-<pre><code>class Seeker(QuidditchPlayer):
-    role = &quot;snitch&quot;
-    energy_expended = 5
+<pre><code>class Keeper(QuidditchPlayer):
+    energy_expended = 50
 
-    def energy(self, time):
+    def play(self, time):
         &quot;&quot;&quot;
-        Returns the amount of energy after time minutes. Seekers expend energy_expended 
-        units of their energy for every minute they have been playing.
-        &gt;&gt;&gt; harry = Seeker(&quot;Harry Potter&quot;, 700)
-        &gt;&gt;&gt; harry.energy(30)
-        550
-        &gt;&gt;&gt; harry.energy(20)
-        600
+        &gt;&gt;&gt; oliver = Keeper(&quot;Oliver Wood&quot;, 380)
+        &gt;&gt;&gt; oliver.play(45)
+        &#x27;Oliver Wood played for 45 minutes&#x27;
+        &gt;&gt;&gt; oliver.energy
+        260.0
+        &gt;&gt;&gt; oliver.play(10)
+        &#x27;Oliver Wood played for 10 minutes&#x27;
+        &gt;&gt;&gt; oliver.energy
+        260.0
         &quot;&quot;&quot;
 <div class="alt 4">        "*** YOUR CODE HERE ***"
         
-</div><div class="solution 4">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x73;&#x65;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x20;&#x28;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x2a;&#x20;&#x53;&#x65;&#x65;&#x6b;&#x65;&#x72;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#x29;</div></code></pre>
+</div><div class="solution 4">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x69;&#x66;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x3e;&#x3d;&#x20;&#x33;&#x30;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x66;&#x6f;&#x72;&#x20;&#x69;&#x20;&#x69;&#x6e;&#x20;&#x72;&#x61;&#x6e;&#x67;&#x65;&#x28;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x2f;&#x2f;&#x20;&#x31;&#x35;&#x29;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x3d;&#x20;&#x20;&#x30;&#x2e;&#x38;&#x20;&#x2a;&#x20;&#x4b;&#x65;&#x65;&#x70;&#x65;&#x72;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x66;&#x22;&#x7b;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x6e;&#x61;&#x6d;&#x65;&#x7d;&#x20;&#x70;&#x6c;&#x61;&#x79;&#x65;&#x64;&#x20;&#x66;&#x6f;&#x72;&#x20;&#x7b;&#x74;&#x69;&#x6d;&#x65;&#x7d;&#x20;&#x6d;&#x69;&#x6e;&#x75;&#x74;&#x65;&#x73;&#x22;</div></code></pre>
 
 
     <button id='4' class='toggleButton'>
@@ -309,41 +369,8 @@ questions:</p>
     </button>
     
 
-<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Seeker.energy</code></pre>
+<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Keeper.play</code></pre>
 
-
-
-<pre><code>class Keeper(QuidditchPlayer):
-    role = &quot;guard&quot;
-    energy_expended = 50
-
-    def energy(self, time):
-        &quot;&quot;&quot;
-        Returns the amount of energy after time minutes. If less than 30 minutes have 
-        passed, then Keepers do not lose any energy. If 30 minutes or more have passed, 
-        then Keepers expend 80% of their energy_expended units for every full 15 
-        minutes that pass.
-        &gt;&gt;&gt; oliver = Keeper(&quot;Oliver Wood&quot;, 380)
-        &gt;&gt;&gt; oliver.energy(45)
-        260.0
-        &gt;&gt;&gt; oliver.energy(29)
-        380
-        &quot;&quot;&quot;
-<div class="alt 5">        "*** YOUR CODE HERE ***"
-        
-</div><div class="solution 5">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x3d;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x73;&#x65;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x69;&#x66;&#x20;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x3c;&#x20;&#x33;&#x30;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x73;&#x65;&#x5f;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x65;&#x6c;&#x73;&#x65;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x66;&#x6f;&#x72;&#x20;&#x69;&#x20;&#x69;&#x6e;&#x20;&#x72;&#x61;&#x6e;&#x67;&#x65;&#x28;&#x74;&#x69;&#x6d;&#x65;&#x20;&#x2f;&#x2f;&#x20;&#x31;&#x35;&#x29;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x3d;&#x20;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x20;&#x2d;&#x20;&#x28;&#x30;&#x2e;&#x38;&#x20;&#x2a;&#x20;&#x4b;&#x65;&#x65;&#x70;&#x65;&#x72;&#x2e;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;&#x5f;&#x65;&#x78;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x64;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x65;&#x6e;&#x65;&#x72;&#x67;&#x79;</div></code></pre>
-
-
-    <button id='5' class='toggleButton'>
-    Toggle Solution<noscript> (enable JavaScript)</noscript>
-    </button>
-    
-
-<p>Use OK to test your code:</p><pre class="pre-copy-block"><code>python3 ok -q Keeper.energy</code></pre>
-
-<p>After you finish implementing the QuidditchPlayers, run the following command in your terminal to play the game:</p>
-
-<pre><code>python3 &#x2d;i quidditch_game.py</code></pre>
 
 
 <h2 id='submission'>Submission</h2>
@@ -374,6 +401,13 @@ questions:</p>
   <li><a href="#quidditch">Quidditch</a></li>
   <ul>
   <li><a href="#q2">Question 2: Quidditch</a></li>
+  <ul>
+  <li><a href="#beater">Beater</a></li>
+  <li><a href="#chaser">Chaser</a></li>
+  <li><a href="#seeker">Seeker</a></li>
+  <li><a href="#keeper">Keeper</a></li>
+</ul>
+
 </ul>
 
 </ul>

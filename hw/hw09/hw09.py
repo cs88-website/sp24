@@ -48,6 +48,18 @@ def same_shape(t1, t2):
     >>> s.branches.append(Tree(6)) # Add a new leaf to s to make it same shape as t
     >>> same_shape(t, s)
     True
+    >>> t1 = Tree(1, [Tree(2, [Tree(3), Tree(4)]), Tree(5)])
+    >>> t2 = Tree(6, [Tree(7), Tree(8, [Tree(9), Tree(10)])])
+    >>> same_shape(t1, t2)
+    False
+    >>> t1 = Tree(1, [Tree(2, [Tree(4), Tree(5)]), Tree(3)])
+    >>> t2 = Tree(9, [Tree(8, [Tree(6), Tree(7)]), Tree(10)])
+    >>> same_shape(t1, t2)
+    True
+    >>> t1 = Tree(1, [Tree(2, [Tree(4, [Tree(6)])]), Tree(3)])
+    >>> t2 = Tree(9, [Tree(8, [Tree(7, [Tree(5)])]), Tree(10)])
+    >>> same_shape(t1, t2)
+    True
     """
     "*** YOUR CODE HERE ***"
 

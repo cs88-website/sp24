@@ -6,16 +6,16 @@
     ],
     "tests": {
         "tests/car.py": "ok_test",
-        "lab07.py:Beater.energy": "doctest",
-        "lab07.py:Chaser.energy": "doctest",
-        "lab07.py:Seeker.energy": "doctest",
-        "lab07.py:Keeper.energy": "doctest"
+        "lab07.py:Beater.play": "doctest",
+        "lab07.py:Chaser.play": "doctest",
+        "lab07.py:Seeker.play": "doctest",
+        "lab07.py:Keeper.play": "doctest"
     },
     "default_tests": [
-        "Beater.energy",
-        "Chaser.energy",
-        "Seeker.energy",
-        "Keeper.energy"
+        "Beater.play",
+        "Chaser.play",
+        "Seeker.play",
+        "Keeper.play"
     ],
     "protocols": [
         "restore",
