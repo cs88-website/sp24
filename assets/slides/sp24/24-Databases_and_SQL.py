@@ -1,5 +1,5 @@
 # https://docs.python.org/3/library/sqlite3.html
-DB_FILENAME = '23-Databases_and_SQL.db'
+DB_FILENAME = '24-Databases_and_SQL.db'
 
 import sqlite3
 # Talking to the database happens through a "connection"

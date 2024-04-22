@@ -49,11 +49,6 @@ SELECT * FROM cones WHERE Flavor LIKE '%berry' OR Price > 5;
 -- 3|chocolate|dark brown|5.25
 -- 4|strawberry|pink|5.25
 
-
--- CREATE TABLE fancy_cones AS (
---    ...> SELECT * FROM cones WHERE price > 4.5
---    ...> );
--- Error: in prepare, near "(": syntax error (1)
 CREATE TABLE fancy_cones AS
    SELECT * FROM cones WHERE price > 4.5;
 

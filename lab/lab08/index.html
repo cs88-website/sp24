@@ -84,24 +84,9 @@ Inside the archive, you will find starter files for the questions in this lab,
 
 <h3 class="question" id="q1">Question 1: Checking account</h3>
 
-<p>We'd like to be able to cash checks, so let's add a <code>deposit_check</code>
-method to our <code>CheckingAccount</code> class. It will take a <code>Check</code> object
-as an argument, and check to see if the <code>payable_to</code> attribute matches
-the <code>CheckingAccount</code>'s holder. If so, it marks the <code>Check</code> as
-deposited, and adds the amount specified to the <code>CheckingAccount</code>'s
-total.</p>
+<p>Consider the <code>Account</code> class provided below, which represents the attributes and behaviors of a bank account.</p>
 
-<p>Write an appropriate <code>Check</code> class, and add the <code>deposit_check</code> method
-to the <code>CheckingAccount</code> class. Make sure not to copy and paste code!
-Use inheritance whenever possible.</p>
-
-<p>See the doctests for examples of how this code should work.</p>
-
-<p>The <code>Account</code> class has been provided.</p>
-
-
-
-<pre><code>class Account(object):
+<pre><code>class Account:
     &quot;&quot;&quot;A bank account that allows deposits and withdrawals.
 
     &gt;&gt;&gt; eric_account = Account(&#x27;Eric&#x27;)
@@ -138,10 +123,47 @@ Use inheritance whenever possible.</p>
         if amount &gt; self.balance:
             return &#x27;Insufficient funds&#x27;
         self.balance = self.balance &#x2d; amount
-        return self.balance
+        return self.balance</code></pre>
 
+<p>We want to create a new class called <code>CheckingAccount</code> which inherits from <code>Account</code>. We'd like to be able to cash checks to our <code>CheckingAccount</code>. To do this, you will have to implement the following:</p>
+
+<ol>
+  <li>Implement the <code>Check</code> class's <code>__init__</code> and <code>mark_deposited</code> methods, which represents a check that can be deposited into an account. Read the doctests in the <code>Check</code> class to learn about the behavior of these methods. Hint: Think about what sort of attributes our <code>Check</code> class should have.</li>
+  <li><p>Implement the <code>CheckingAccount</code> class's <code>deposit_check</code> method. It will take a <code>Check</code> object as an argument.</p>
+
+  <ul>
+    <li>If the check was already deposited, print <code>The police have been notified</code></li>
+    <li>If the check is NOT payable to the checking account holder, print <code>The police have been notified</code></li>
+    <li>Otherwise, mark the check as deposited and deposit the amount into the checking account</li>
+  </ul></li>
+</ol>
+
+<p>The doctests for this problem are extremely important and valuable in understanding how this code works and how the <code>CheckingAccount</code> and <code>Check</code> classes should interact with each other.</p>
+
+
+
+<pre><code>class Check:
+    &quot;&quot;&quot;A Check object that can be deposited.
+
+    &gt;&gt;&gt; eric_check = Check(&quot;Eric&quot;, 30)  # 30 dollars, payable to Eric
+    &gt;&gt;&gt; eric_check.payable_to
+    &#x27;Eric&#x27;
+    &gt;&gt;&gt; eric_check.amount
+    30
+    &gt;&gt;&gt; eric_check.deposited
+    False
+    &gt;&gt;&gt; eric_check.mark_deposited()
+    &gt;&gt;&gt; eric_check.deposited
+    True
+    &quot;&quot;&quot;
+    def __init__(self, payable_to, amount):
+<div class="alt 1">        "*** YOUR CODE HERE ***"
+</div><div class="solution 1">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x70;&#x61;&#x79;&#x61;&#x62;&#x6c;&#x65;&#x5f;&#x74;&#x6f;&#x20;&#x3d;&#x20;&#x70;&#x61;&#x79;&#x61;&#x62;&#x6c;&#x65;&#x5f;&#x74;&#x6f;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x61;&#x6d;&#x6f;&#x75;&#x6e;&#x74;&#x20;&#x3d;&#x20;&#x61;&#x6d;&#x6f;&#x75;&#x6e;&#x74;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x65;&#x64;&#x20;&#x3d;&#x20;&#x46;&#x61;&#x6c;&#x73;&#x65;</div>
+    def mark_deposited(self):
+<div class="alt 1">        "*** YOUR CODE HERE ***"
+</div><div class="solution 1">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x65;&#x64;&#x20;&#x3d;&#x20;&#x54;&#x72;&#x75;&#x65;</div>
 class CheckingAccount(Account):
-    &quot;&quot;&quot;A bank account that charges for withdrawals.
+    &quot;&quot;&quot;A bank account that charges for withdrawals and can deposit checks.
 
     &gt;&gt;&gt; check = Check(&quot;Steven&quot;, 42)  # 42 dollars, payable to Steven
     &gt;&gt;&gt; steven_account = CheckingAccount(&quot;Steven&quot;)
@@ -150,16 +172,24 @@ class CheckingAccount(Account):
     The police have been notified.
     &gt;&gt;&gt; eric_account.balance
     0
-    &gt;&gt;&gt; check.deposited
-    False
     &gt;&gt;&gt; steven_account.balance
     0
+    &gt;&gt;&gt; check.deposited
+    False
+    &gt;&gt;&gt; eric_account.transactions
+    []
+    &gt;&gt;&gt; steven_account.transactions
+    []
     &gt;&gt;&gt; steven_account.deposit_check(check)
     42
     &gt;&gt;&gt; check.deposited
     True
+    &gt;&gt;&gt; steven_account.transactions
+    [(&#x27;deposit&#x27;, 42)]
     &gt;&gt;&gt; steven_account.deposit_check(check)  # can&#x27;t cash check twice
     The police have been notified.
+    &gt;&gt;&gt; steven_account.transactions  # transactions history shouldn&#x27;t have changed
+    [(&#x27;deposit&#x27;, 42)]
     &quot;&quot;&quot;
     withdraw_fee = 1
     interest = 0.01
@@ -167,10 +197,9 @@ class CheckingAccount(Account):
     def withdraw(self, amount):
         return Account.withdraw(self, amount + self.withdraw_fee)
 
-<div class="solution 1">&#x20;&#x20;&#x20;&#x20;&#x64;&#x65;&#x66;&#x20;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x5f;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x28;&#x73;&#x65;&#x6c;&#x66;&#x2c;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x29;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x69;&#x66;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x70;&#x61;&#x79;&#x61;&#x62;&#x6c;&#x65;&#x5f;&#x74;&#x6f;&#x20;&#x21;&#x3d;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x68;&#x6f;&#x6c;&#x64;&#x65;&#x72;&#x20;&#x6f;&#x72;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x65;&#x64;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x70;&#x72;&#x69;&#x6e;&#x74;&#x28;&#x22;&#x54;&#x68;&#x65;&#x20;&#x70;&#x6f;&#x6c;&#x69;&#x63;&#x65;&#x20;&#x68;&#x61;&#x76;&#x65;&#x20;&#x62;&#x65;&#x65;&#x6e;&#x20;&#x6e;&#x6f;&#x74;&#x69;&#x66;&#x69;&#x65;&#x64;&#x2e;&#x22;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x65;&#x6c;&#x73;&#x65;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x28;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x61;&#x6d;&#x6f;&#x75;&#x6e;&#x74;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x65;&#x64;&#x20;&#x3d;&#x20;&#x54;&#x72;&#x75;&#x65;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x6c;&#x61;&#x6e;&#x63;&#x65;</div>
-class Check(object):
-<div class="alt 1">    "*** YOUR CODE HERE ***"
-</div><div class="solution 1">&#x20;&#x20;&#x20;&#x20;&#x64;&#x65;&#x66;&#x20;&#x5f;&#x5f;&#x69;&#x6e;&#x69;&#x74;&#x5f;&#x5f;&#x28;&#x73;&#x65;&#x6c;&#x66;&#x2c;&#x20;&#x70;&#x61;&#x79;&#x61;&#x62;&#x6c;&#x65;&#x5f;&#x74;&#x6f;&#x2c;&#x20;&#x61;&#x6d;&#x6f;&#x75;&#x6e;&#x74;&#x29;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x70;&#x61;&#x79;&#x61;&#x62;&#x6c;&#x65;&#x5f;&#x74;&#x6f;&#x20;&#x3d;&#x20;&#x70;&#x61;&#x79;&#x61;&#x62;&#x6c;&#x65;&#x5f;&#x74;&#x6f;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x61;&#x6d;&#x6f;&#x75;&#x6e;&#x74;&#x20;&#x3d;&#x20;&#x61;&#x6d;&#x6f;&#x75;&#x6e;&#x74;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x65;&#x64;&#x20;&#x3d;&#x20;&#x46;&#x61;&#x6c;&#x73;&#x65;</div></code></pre>
+    def deposit_check(self, check):
+<div class="alt 1">        "*** YOUR CODE HERE ***"
+</div><div class="solution 1">&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x69;&#x66;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x70;&#x61;&#x79;&#x61;&#x62;&#x6c;&#x65;&#x5f;&#x74;&#x6f;&#x20;&#x21;&#x3d;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x68;&#x6f;&#x6c;&#x64;&#x65;&#x72;&#x20;&#x6f;&#x72;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x65;&#x64;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x70;&#x72;&#x69;&#x6e;&#x74;&#x28;&#x22;&#x54;&#x68;&#x65;&#x20;&#x70;&#x6f;&#x6c;&#x69;&#x63;&#x65;&#x20;&#x68;&#x61;&#x76;&#x65;&#x20;&#x62;&#x65;&#x65;&#x6e;&#x20;&#x6e;&#x6f;&#x74;&#x69;&#x66;&#x69;&#x65;&#x64;&#x2e;&#x22;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x65;&#x6c;&#x73;&#x65;&#x3a;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x28;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x61;&#x6d;&#x6f;&#x75;&#x6e;&#x74;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x63;&#x68;&#x65;&#x63;&#x6b;&#x2e;&#x6d;&#x61;&#x72;&#x6b;&#x5f;&#x64;&#x65;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x65;&#x64;&#x28;&#x29;&#xa;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x74;&#x75;&#x72;&#x6e;&#x20;&#x73;&#x65;&#x6c;&#x66;&#x2e;&#x62;&#x61;&#x6c;&#x61;&#x6e;&#x63;&#x65;</div></code></pre>
 
 
     <button id='1' class='toggleButton'>

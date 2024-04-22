@@ -2,7 +2,7 @@
 
 # Q1
 
-class Account(object):
+class Account:
     """A bank account that allows deposits and withdrawals.
 
     >>> eric_account = Account('Eric')
@@ -42,8 +42,29 @@ class Account(object):
         return self.balance
 
 
+class Check:
+    """A Check object that can be deposited.
+
+    >>> eric_check = Check("Eric", 30)  # 30 dollars, payable to Eric
+    >>> eric_check.payable_to
+    'Eric'
+    >>> eric_check.amount
+    30
+    >>> eric_check.deposited
+    False
+    >>> eric_check.mark_deposited()
+    >>> eric_check.deposited
+    True
+    """
+    def __init__(self, payable_to, amount):
+        "*** YOUR CODE HERE ***"
+ 
+    def mark_deposited(self):
+        "*** YOUR CODE HERE ***"
+
+
 class CheckingAccount(Account):
-    """A bank account that charges for withdrawals.
+    """A bank account that charges for withdrawals and can deposit checks.
 
     >>> check = Check("Steven", 42)  # 42 dollars, payable to Steven
     >>> steven_account = CheckingAccount("Steven")
@@ -52,16 +73,24 @@ class CheckingAccount(Account):
     The police have been notified.
     >>> eric_account.balance
     0
-    >>> check.deposited
-    False
     >>> steven_account.balance
     0
+    >>> check.deposited
+    False
+    >>> eric_account.transactions
+    []
+    >>> steven_account.transactions
+    []
     >>> steven_account.deposit_check(check)
     42
     >>> check.deposited
     True
+    >>> steven_account.transactions
+    [('deposit', 42)]
     >>> steven_account.deposit_check(check)  # can't cash check twice
     The police have been notified.
+    >>> steven_account.transactions  # transactions history shouldn't have changed
+    [('deposit', 42)]
     """
     withdraw_fee = 1
     interest = 0.01
@@ -69,9 +98,8 @@ class CheckingAccount(Account):
     def withdraw(self, amount):
         return Account.withdraw(self, amount + self.withdraw_fee)
 
-
-class Check(object):
-    "*** YOUR CODE HERE ***"
+    def deposit_check(self, check):
+        "*** YOUR CODE HERE ***"
 
 
 ## Linked Lists ##
